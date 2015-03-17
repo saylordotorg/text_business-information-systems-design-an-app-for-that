@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="shared/bookhub.css" rel="stylesheet" type="text/css">
+  <title>Build, Buy, or Reuse Solutions: Develop a Website to Market the App</title>
+</head>
+<body>
+
+  
+  <div id=navbar-top class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s09-planning-usable-websites-desig.html"><img src="shared/images/batch-left.png"></a> <a href="s09-planning-usable-websites-desig.html">Previous Chapter</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s11-knowledge-with-information-sys.html">Next Chapter</a> <a href="s11-knowledge-with-information-sys.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  <div id="book-content">
+    <div class="chapter" id="frost-ch06" version="5.0" lang="en">
+    <h1 class="title editable block">
+<span class="title-prefix">Chapter 6</span> Build, Buy, or Reuse Solutions: Develop a Website to Market the App</h1>
+    <div class="section" id="frost-ch06_s00" version="5.0" lang="en">
+    </div>
+</div>
+<div class="section" id="frost-ch06_s01" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">6.1</span> Development Considerations</h2>
+    <div class="learning_objectives editable block" id="frost-ch06_s01_n01">
+        <h3 class="title">Learning Objectives</h3>
+        <ol class="orderedlist" id="frost-ch06_s01_o01" numeration="arabic">
+            <li>Determine when to build vs. buy a website solution</li>
+            <li>Compare and contrast the benefits of authoring in the cloud vs. on a workstation</li>
+            <li>Bring corporate standards into the decision making process when choosing development options</li>
+        </ol>
+    </div>
+    <div class="section" id="frost-ch06_s01_s01" version="5.0" lang="en">
+        <h2 class="title editable block">Introduction</h2>
+        <p class="para editable block" id="frost-ch06_s01_s01_p01">In this chapter you will create a website prototype to help market your iPhone application. Your prototype will become part of the Class App store. Other students will be able to review and purchase your app online. We are going to build a store together—so let’s get started!</p>
+        <p class="para editable block" id="frost-ch06_s01_s01_p02">Like the iTunes store, our class store will have separate pages describing each app offered for sale. Those pages will include screenshots of the apps—the same screenshots that you produced with MockApp. Each student developer will make his or her own page and then link that page to the store.</p>
+        <p class="para editable block" id="frost-ch06_s01_s01_p03">Once all the pages are linked we will have a shopping period during which we will “buy” each other’s apps. We will capture the sales data to see which apps are best selling and highest rated.</p>
+    </div>
+    <div class="section" id="frost-ch06_s01_s02" version="5.0" lang="en">
+        <h2 class="title editable block">Where Are We in the Life Cycle?</h2>
+        <p class="para editable block" id="frost-ch06_s01_s02_p01">Many information systems projects are conceived of in a life cycle that progresses in stages from analysis to implementation. The diagram below shows the stages that we touch in the current chapter:</p>
+        <div class="informalfigure large block">
+            <img src="section_10/793abc3668476fde040bfab580a84229.png">
+        </div>
+    </div>
+    <div class="section" id="frost-ch06_s01_s03" version="5.0" lang="en">
+        <h2 class="title editable block">Compatibility with Corporate Standards</h2>
+        <p class="para editable block" id="frost-ch06_s01_s03_p01">In the design chapter we talked about how important it is for us to standardize the look and feel for each page in our store so that it indeed looks like a store and not a loosely affiliated and somewhat bizarre collection of pages. However, it is also important that we standardize the development platform so that our store operates seamlessly.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p02">The corporate world tends to be conservative in choosing information systems solutions. In fact corporations usually like to standardize to preserve the brand image and to ensure reliability and ease of maintenance.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p03">Our classroom corporation is no different. Since we will be developing on online store together, it makes sense for us to agree on a common look and feel for each page in the site as well as a common platform for development. Our common platform is Google Sites and your professor may also require that you use a specific theme family on Google Sites to preserve a common look and feel.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p04">Corporations such as <a class="link" href="http://amazon.com">Amazon.com</a> have a clearly established corporate identity, which appears on every page. They use an orange and blue color scheme and consistently place navigation elements. Amazon uses a proprietary development tool since they are an industry leader.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p05">Why is standardization so important? Consider that if you create something wonderful in a cutting edge authoring tool and then leave, no one else will be able to update the site you created. More often than not this is exactly what happens when students create websites for small businesses. The business has no way to update and maintain the site in response to business needs. Concern about site maintenance is one of the reasons that businesses are hesitant to engage students to create their websites as a class project even for free.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p06">If given a choice between features and standardization, corporations will almost always choose standardization. We see this in other arenas as well such as office productivity tools. Corporations often mandate that everyone use the same word processor and even the same version! Students are often surprised when they arrive at the workplace to find that corporations live one or two versions behind on word processing software. Every upgrade represents potential costs in software, hardware, training, and lost productivity during training. Unless there is an overriding benefit to be realized, corporations will often choose to avoid the cost. In sum, corporations tend to be very conservative when it comes to software choice.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p07">The corporate world is also happiest when there are clear market leaders to choose from. The last thing that a corporation needs is to invest in software from a company that later goes out of business.</p>
+    </div>
+    <div class="section" id="frost-ch06_s01_s04" version="5.0" lang="en">
+        <h2 class="title editable block">Build vs. Buy</h2>
+        <p class="para editable block" id="frost-ch06_s01_s04_p01">You might well ask why we are building a store rather than using off the shelf software that performs store management. The bottom line is that we want you to get under the hood to see how an information system functions—particularly how it interacts with a database.</p>
+        <p class="para editable block" id="frost-ch06_s01_s04_p02">Nonetheless, the first decision that a developer needs to make is whether to <span class="margin_term"><a class="glossterm">build or buy</a><span class="glossdef">The classic decision on whether to program or purchase an information systems solution. It is usually better to buy.</span></span> a solution for the business problem. To build means creating a customized solution; to buy means purchasing an off the shelf solution. The rule of thumb here is that if your business is similar in nature to thousands of other businesses, then you should buy a pre-built solution. There is no point in reinventing the wheel.</p>
+        <p class="para editable block" id="frost-ch06_s01_s04_p03">Off the shelf solutions tend to have a number of advantages. They anticipate functionality that your business requires and they are thoroughly tested. Most systems can be further customized to meet the needs of your business. From a support perspective, not only do you have customer service from the company that developed the solution, but you also have a user community that shares tips and tricks. Furthermore, as new versions are released you can improve the functionality and acquire bug fixes for your website with relatively little additional cost.</p>
+        <p class="para editable block" id="frost-ch06_s01_s04_p04">There are off the shelf solutions for almost any industry you can imagine—from doctor’s offices to construction companies. And the market is competitive, which helps drive down prices. Rather than hire a programmer, many businesses choose to adopt off the shelf solutions. Many of these off the shelf solutions live in the cloud so that the business does not even need to have a server in their office—only workstations to access the data in the cloud. For example <a class="link" href="http://www.curvedental.com">www.curvedental.com</a> is a cloud solution for a dental office.</p>
+        <p class="para editable block" id="frost-ch06_s01_s04_p05">The major disadvantage of off the shelf solutions is that they are limited in how far they may be customized.</p>
+        <p class="para editable block" id="frost-ch06_s01_s04_p06">If you do choose to build a customized solution from scratch, you still need to choose an authoring tool. Ideally, you want a tool that has some pre-built features that snap together much like Legos. We will employ a user friendly tool provided by Google called Google Sites.</p>
+    </div>
+    <div class="section" id="frost-ch06_s01_s05" version="5.0" lang="en">
+        <h2 class="title editable block">Design View vs. Code View</h2>
+        <p class="para editable block" id="frost-ch06_s01_s05_p01">Because this is an introductory course we want to avoid writing programming code. Fortunately Google Sites is sophisticated enough to allow us to avoid code view. However, we should understand the relationship between what we see on the screen—design view—and the underlying code.</p>
+        <p class="para editable block" id="frost-ch06_s01_s05_p02">Every webpage is constructed from HTML code. Professionals go to great lengths to refine that code for optimal look and performance. Most professional sites use a suite of products to prepare images for the site, to manage code on the site, to keep the pages organized, and to integrate with the backend database.</p>
+        <p class="para editable block" id="frost-ch06_s01_s05_p03">Adobe is probably the leading vendor of professional <span class="margin_term"><a class="glossterm">website authoring tools</a><span class="glossdef">Programs that greatly simplify the process of building a website. Google Sites is the authoring tool that we will use.</span></span>. Many custom built website solutions are authored at least in part with Adobe tools. The following page shows just a few of the many tools available from Adobe in their Creative Suite. The very fact that Adobe packages the tools in a suite is a hint at the complexity involved in creating a professional site.</p>
+        <p class="para editable block" id="frost-ch06_s01_s05_p04">Professional authoring tools typically have a <span class="margin_term"><a class="glossterm">design view</a><span class="glossdef">The what you see is what you get (WYSIWYG) view of website authoring. The design tool functions like a word processor.</span></span> and a <span class="margin_term"><a class="glossterm">code view</a><span class="glossdef">The HTML code that is built behind the design view. Most authoring tools provide a code view, though you rarely need to use it at our level. You may have seen some code view on YouTube when they show the code to embed a video in your webpage.</span></span> allowing the developer to switch back and forth between the two. The design view is much like working with PowerPoint. You drag text and graphics where they belong on the page. The code view allows the developer to edit HTML code for even more precise control or the look, feel, or operation of the site.</p>
+        <p class="para editable block" id="frost-ch06_s01_s05_p05">However, few beginners ever want to see website code nor pay for the sophisticated code editing features. Fortunately, they don’t have to. A number of website authoring tools have been developed over the years to automate the process of code generation and shield users from code view. One of them, Google Sites, is shown on the following page.</p>
+        <p class="para editable block" id="frost-ch06_s01_s05_p06">But what if you really need a piece of code to accomplish a specific task? Google Sites created an open platform so that developers can create and publish “gadgets,” which can be dropped into your website. Gadgets are like the prebuilt Lego assemblies mentioned earlier. They snap into an existing site. In fact gadgets are to Google Sites what apps are to the iPhone platform. In the same way that the Apple touts, “There’s an app for that,” for almost every iPhone need, just so Google might boast, “There’s a gadget for that,” for many website development needs. And like iPhone apps, some gadgets provide very sophisticated functionality.</p>
+        <div class="informalfigure large block">
+            <img src="section_10/2af5385c535163d07cdb705270eaab10.png">
+            <p class="para">Adobe Creative Suite (above) and Google Sites (below) are both website authoring tools. Creative Suite runs on high powered workstations and is used by professionals who need precise control over the look and feel of their site. Creative Suite is really a family of tools including Photoshop, Flash, and others than work well together. Google Sites is a rapid development solution that lives in the cloud. Control is more limited to template based solutions. Development time is much shorter with Google Sites than with Creative Suite. Adobe product screenshot reprinted with permission from Adobe Systems Incorporated.</p>
+        </div>
+    </div>
+    <div class="section" id="frost-ch06_s01_s06" version="5.0" lang="en">
+        <h2 class="title editable block">Client Side vs. Cloud Development</h2>
+        <p class="para editable block" id="frost-ch06_s01_s06_p01">Our authoring tool, Google Sites, lives in the cloud. Amateur sites and some small businesses tend to prefer cloud based tools for their low cost and ease of use.</p>
+        <div class="informalfigure large block">
+            <img src="section_10/b5f13d51312a6f31da0ad4acd09fdc2d.png">
+            <p class="para">Client side toolkits such as Adobe Creative Suite allow all development and testing to take place offline before uploading to the web server in the cloud. By contrast, cloud based tools such as Google Sites require the development to take place in the cloud. Cloud based tools tend to run a bit slower due to internet response times, but the results are instantly published.</p>
+        </div>
+        <p class="para editable block" id="frost-ch06_s01_s06_p02">The issue on <span class="margin_term"><a class="glossterm">client side</a><span class="glossdef">Running development software such as Dreamweaver on your workstation. The major advantage is that it runs very fast when running locally.</span></span> vs. <span class="margin_term"><a class="glossterm">cloud development</a><span class="glossdef">Accessing development software that lives in the cloud. The major advantage is that the development process tends to be greatly simplified.</span></span> is where the authoring software is located. Client side development takes place on a local computer. Only after the website is thoroughly tested is it uploaded to the cloud for hosting. Almost all professional systems are developed in this way.</p>
+        <p class="para editable block" id="frost-ch06_s01_s06_p03">There are numerous advantages to client side development, especially for large sites. The developer tends to have greater control over the look and feel of the website. The response time of the computer during development is very quick since there is no delay waiting for a cloud service to redraw the screen. Furthermore, the site is portable. The developer can choose to host it on any computer in the cloud.</p>
+        <p class="para editable block" id="frost-ch06_s01_s06_p04">Client side authoring tools range in price from free packages such as Pages, which is part of Apple’s operating system, to very expensive packages such as Adobe Creative Suite, which costs hundreds of dollars.</p>
+        <p class="para editable block" id="frost-ch06_s01_s06_p05">Cloud development tends to have a more template based look and feel. Google Sites is an example of a cloud development tool. The developer has less fine grained control over the look and feel of the website. However, with cloud development it is potentially easier to collaborate and integrate content.</p>
+        <p class="para editable block" id="frost-ch06_s01_s06_p06">Cloud development tools tend to be free or very low cost. The vendor of cloud development tools recovers their costs by running ads alongside, or even within, your site. In other words, you have no choice but to host your site with the cloud provider. As the page views or business features of the site begin to increase, the cloud provider will begin charging higher fees.</p>
+        <div class="key_takeaways editable block" id="frost-ch06_s01_s06_n01">
+            <h3 class="title">Key Takeaways</h3>
+            <ul class="itemizedlist" id="frost-ch06_s01_s06_l01" mark="bullet">
+                <li>It is usually best to buy rather than build an information system solution. And normally a cloud solution is preferred. Purchased cloud solutions tend to be more cost effective, better tested, and reliable.</li>
+                <li>Following corporate standards for software selection tends to lead to better integrated solutions.</li>
+                <li>A prototype is one step up from a mockup. It is a working version of the website though incomplete.</li>
+                <li>If you do decide to build then you will need an authoring tool to simplify the process of website construction. Authoring tools may live on your computer or you can use a cloud based authoring tool such as Google Sites.</li>
+            </ul>
+        </div>
+        <div class="exercises editable block" id="frost-ch06_s01_s06_n02">
+            <h3 class="title">Questions and Exercises</h3>
+            <ol class="orderedlist" id="frost-ch06_s01_s06_o01" numeration="arabic">
+                <li>As Internet speed and security increases would you expect to see more or fewer businesses turning to cloud solutions? Explain.</li>
+                <li>Is it better to outsource domestically or internationally? Explain the factors upon which your decision rests.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="section" id="frost-ch06_s02" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">6.2</span> Google Sites</h2>
+    <div class="learning_objectives editable block" id="frost-ch06_s02_n01">
+        <h3 class="title">Learning Objectives</h3>
+        <ol class="orderedlist" id="frost-ch06_s02_o01" numeration="arabic">
+            <li>Create a working website prototype</li>
+            <li>Author and customize a website in the cloud</li>
+            <li>Develop a website with good usability</li>
+            <li>Integrate text and graphics</li>
+            <li>Integrate other cloud services</li>
+            <li>Match colors, logos, fonts, and other design elements to your iPhone App</li>
+            <li>Add and modify navigation buttons</li>
+        </ol>
+    </div>
+    <p class="para editable block" id="frost-ch06_s02_p02">Now it is time to build our store. We will walk you through some of the aspects of page creation. We will begin by discussing templates and themes.</p>
+    <div class="section" id="frost-ch06_s02_s01" version="5.0" lang="en">
+        <div class="section" id="frost-ch06_s02_s01_s01" version="5.0" lang="en">
+            <h2 class="title editable block">Get a Google Account</h2>
+            <p class="para editable block" id="frost-ch06_s02_s01_s01_p01">Google Sites allows users to build a website in the cloud using just a web browser. The site editor as well as all of the content lives in the cloud on Google’s servers. Google Sites is free to Gmail account holders. Sign up for a Gmail account if you do not have one already.</p>
+        </div>
+        <div class="section" id="frost-ch06_s02_s01_s02" version="5.0" lang="en">
+            <h2 class="title editable block">Start Up Sites</h2>
+            <p class="para editable block" id="frost-ch06_s02_s01_s02_p01">Sites is located under the More menu of your Gmail account. You need to pick a unique site name. One way to make it unique is to add your Gmail username as a prefix or suffix to your site name—e.g., FrostCoolApp or CoolAppFrost.</p>
+        </div>
+        <div class="section" id="frost-ch06_s02_s01_s03" version="5.0" lang="en">
+            <h2 class="title editable block">Choose a Site Template = Prebuilt Pages &amp; Theme</h2>
+            <p class="para editable block" id="frost-ch06_s02_s01_s03_p01">A <span class="margin_term"><a class="glossterm">site template</a><span class="glossdef">A pre-built site with placeholder text, images, and a pre-selected theme. Site templates are the closest thing to an instant website.</span></span> is a pre-built site with lorem ipsum (Latin gibberish) placeholder text and images. Each page is already laid out. For example the Family template has Family blog, Family calendar, Family map, and so forth. Template users simply swap in their own content.</p>
+            <p class="para editable block" id="frost-ch06_s02_s01_s03_p02">Site templates are provided for different types of applications such as a classroom or small business. While some of the templates are pretty slick, we will begin with the Blank template in order to learn Google Sites. The Blank template contains only a home page with a simple theme. You add pages to the Blank template as needed.</p>
+        </div>
+        <div class="section" id="frost-ch06_s02_s01_s04" version="5.0" lang="en">
+            <h2 class="title editable block">Choose a Theme = Layout &amp; Formatting</h2>
+            <p class="para editable block" id="frost-ch06_s02_s01_s04_p01">The <span class="margin_term"><a class="glossterm">theme</a><span class="glossdef">Similar to a template but without the placeholder text and images. A theme specifies formatting—layout, colors, and fonts.</span></span> is similar to a theme in PowerPoint. Every page in the site derives its look and feel, layout, colors, fonts, and so forth from the theme. You must pick a theme in the same family as the Class Store website since your site is part of the store. It is easier to pick a Theme when you create the site but you may change it later by accessing:</p>
+            <p class="para editable block" id="frost-ch06_s02_s01_s04_p02">More Actions &gt; Manage Site &gt; Themes</p>
+            <p class="para editable block" id="frost-ch06_s02_s01_s04_p03">&lt;&lt; Return to Site</p>
+            <div class="informalfigure large block">
+                <img src="section_10/dd83274b0a3a33e10383bd26563023a5.png">
+                <p class="para">Google Sites opening screen allows you to choose a template, name for your site, and a theme. For our purposes we will stick with the Blank template so that we learn to build a site from scratch.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="frost-ch06_s02_s02" version="5.0" lang="en">
+        <h2 class="title editable block">Google Sites: Management</h2>
+        <p class="para editable block" id="frost-ch06_s02_s02_p01">The built in templates and themes are a good start. However, you will want to control the look and feel of the site to match your corporate standards and the brand.</p>
+        <div class="section" id="frost-ch06_s02_s02_s01" version="5.0" lang="en">
+            <h2 class="title editable block">Tweak the Theme</h2>
+            <p class="para editable block" id="frost-ch06_s02_s02_s01_p01">While the theme is a good start, you may want to tweak the theme on your site much as you might modify the Master Slide in PowerPoint. Modify items such as the Header and Sidebar, which show on every page. Modify background colors and fonts for the different regions of the page if necessary.</p>
+            <p class="para editable block" id="frost-ch06_s02_s02_s01_p02">More Actions &gt; Manage Site</p>
+            <p class="para editable block" id="frost-ch06_s02_s02_s01_p03">&gt; Site Settings &gt; General &gt; Site Name .... &gt; Save Changes</p>
+            <p class="para editable block" id="frost-ch06_s02_s02_s01_p04">&gt; Site Appearance &gt; Site Layout ..... &gt; Save Changes</p>
+            <p class="para editable block" id="frost-ch06_s02_s02_s01_p05">&gt; Site Appearance &gt; Colors and Fonts</p>
+            <p class="para editable block" id="frost-ch06_s02_s02_s01_p06">&lt;&lt; Return to Site</p>
+        </div>
+        <div class="section" id="frost-ch06_s02_s02_s02" version="5.0" lang="en">
+            <h2 class="title editable block">Layers on a Page</h2>
+            <p class="para editable block" id="frost-ch06_s02_s02_s02_p01">When working with colors and fonts it is helpful to understand that a web page is made up of a number of <span class="margin_term"><a class="glossterm">layers</a><span class="glossdef">Webpage elements that lie on top of one another to create a layered look on the page.</span></span> stacked on top of one another. Here is the order of the layers beginning with the Page Background on the bottom.</p>
+            <ul class="itemizedlist editable block" id="frost-ch06_s02_s02_s02_l01" mark="bullet">
+                <li>Page Background</li>
+                <li>Page Wrapper</li>
+                <li>Content Background</li>
+                <li>Content</li>
+            </ul>
+        </div>
+        <div class="section" id="frost-ch06_s02_s02_s03" version="5.0" lang="en">
+            <h2 class="title editable block">Create Pages from Page Templates</h2>
+            <p class="para editable block" id="frost-ch06_s02_s02_s03_p01">Google Sites was constructed to support workgroup collaboration. Therefore it has some interactive prebuilt page templates (Announcements, File Cabinet, and List). You will probably stick with the simple <span class="margin_term"><a class="glossterm">Web Page template</a><span class="glossdef">An unfortunate reuse of the word template—page template refers to whether or not a given page will have collaboration elements on it—e.g., allowing users to post comments on the page. By contrast, the site template described earlier refers to the layout and pages of the entire site.</span></span> for most pages. Unfortunately, even this template sometimes allows user to attach files and post comments to individual pages. You will have to turn this feature off as described below.</p>
+            <p class="para editable block" id="frost-ch06_s02_s02_s03_p02">Select template for page. More Actions &gt; Change Page Template</p>
+            <ul class="itemizedlist editable block" id="frost-ch06_s02_s02_s03_l01" mark="bullet">
+                <li>Web Page (choose this one for most pages)</li>
+                <li>Announcements (announcements to the team)</li>
+                <li>File Cabinet (if you want users to be able to upload files)</li>
+                <li>List (maintain to do lists for a workgroup website)</li>
+            </ul>
+            <p class="para editable block" id="frost-ch06_s02_s02_s03_p03">Eliminate user attachments and comments</p>
+            <ul class="itemizedlist editable block" id="frost-ch06_s02_s02_s03_l02" mark="bullet">
+                <li>More Actions &gt; Page Settings</li>
+            </ul>
+        </div>
+        <div class="section" id="frost-ch06_s02_s02_s04" version="5.0" lang="en">
+            <h2 class="title editable block">Select Layout for Each Page</h2>
+            <p class="para editable block" id="frost-ch06_s02_s02_s04_p01">In edit mode the <span class="margin_term"><a class="glossterm">content area</a><span class="glossdef">The portion of the page where you write your content. You can specify layouts for each content area—e.g., a three column layout.</span></span> of each page can be edited. In our experience the layout is best controlled by inserting tables to contain the content.</p>
+            <div class="informalfigure large block">
+                <img src="section_10/fdc9033abdf8c4d22b23a67e5ec905fa.png">
+                <p class="para">The Manage Site menu has powerful options that control the look and feel of the site. Changes made from this menu affect every page in the site.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="frost-ch06_s02_s03" version="5.0" lang="en">
+        <h2 class="title editable block">Google Sites: Text, Graphics, Video, and Gadgets</h2>
+        <div class="section" id="frost-ch06_s02_s03_s01" version="5.0" lang="en">
+            <h2 class="title editable block">Add Text</h2>
+            <p class="para editable block" id="frost-ch06_s02_s03_p01">Add text to the pages. Be consistent on formatting throughout site. Choose appropriate headings styles. Choose appropriate font sizes if necessary.</p>
+        </div>
+        <div class="section" id="frost-ch06_s02_s03_s02" version="5.0" lang="en">
+            <h2 class="title editable block">Add Images</h2>
+            <p class="para editable block" id="frost-ch06_s02_s03_s02_p01">Before you can add images you need to save them and prepare a place on the page to receive the images. When using images from your iPhone app you can save them in two ways. You can right click on the image and save it as a PNG file. (You may have to group it first). Alternatively, you can take screen shots of your app.</p>
+            <p class="para editable block" id="frost-ch06_s02_s03_s02_p02">To prepare the page to receive images, insert a table to receive the images. Then Insert &gt; Image. Resize and align images in their table cells as necessary.</p>
+        </div>
+        <div class="section" id="frost-ch06_s02_s03_s03" version="5.0" lang="en">
+            <h2 class="title editable block">Insert Gadgets</h2>
+            <p class="para editable block" id="frost-ch06_s02_s03_s03_p01"><span class="margin_term"><a class="glossterm">Gadgets</a><span class="glossdef">Mini services that exist in the cloud and can be snapped into your webpage. For example, you can include a weather gadget.</span></span> can add tremendous functionality to a page. We will use a gadget that captures customer information for customers who sign up for product updates. The gadget is a form that saves to a Google Docs spreadsheet. Google Docs is yet another free Google service that allows you to store and collaborate on documents in the cloud. You access Google Docs by clicking on the Documents link at the top of your Gmail account. Create and save a Form in Google Docs. Documents &gt; Create &gt; Form. Then insert the Form in your web page. Edit Page &gt; Insert &gt; Spreadsheet Form. To test, try visiting the page and filling out the form with some test data. Then return to Google Docs to view the spreadsheet of customers.</p>
+            <p class="para editable block" id="frost-ch06_s02_s03_s03_p02">There are many other gadgets available from the Edit Page menu including the ability to embed YouTube videos.</p>
+            <div class="informalfigure large block">
+                <img src="section_10/a213ac7cb7142fd8dd64d341eb092bc1.png">
+                <p class="para">The Insert menu is used to insert images and gadgets. If you get the following error message when inserting a gadget answer NO, otherwise you get only part of the gadget—the part that can be delivered securely.</p>
+            </div>
+            <div class="informalfigure large block">
+                <img src="section_10/7ee180a4a573184c4dd6f14335935d7b.png">
+            </div>
+            <div class="key_takeaways editable block" id="frost-ch06_s02_s03_s03_n01">
+                <h3 class="title">Key Takeaways</h3>
+                <ul class="itemizedlist" id="frost-ch06_s02_s03_s03_l01" mark="bullet">
+                    <li>Google Sites tries to simplify the development process by providing pre-built templates for different businesses and themes to control the overall look and feel.</li>
+                    <li>Gadgets are to Google Sites what apps are to the iPhone.</li>
+                    <li>You can accomplish most operations in Google Sites without writing a single line of HTML code.</li>
+                </ul>
+            </div>
+            <div class="exercises editable block" id="frost-ch06_s02_s03_s03_n02">
+                <h3 class="title">Questions and Exercises</h3>
+                <ol class="orderedlist" id="frost-ch06_s02_s03_s03_o01" numeration="arabic">
+                    <li>In what ways is Google Sites similar to a word processor? In what ways is it different?</li>
+                    <li>Which repeated elements from the store theme are required to make your page look like part of the store? Explain.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section" id="frost-ch06_s03" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">6.3</span> Database Integration</h2>
+    <div class="learning_objectives editable block" id="frost-ch06_s03_n01">
+        <h3 class="title">Learning Objectives</h3>
+        <ol class="orderedlist" id="frost-ch06_s03_o01" numeration="arabic">
+            <li>Explain why websites need to capture and display data</li>
+            <li>Explain the role of a form in capturing data</li>
+            <li>Create a form that captures data and saves it to a Google spreadsheet</li>
+        </ol>
+    </div>
+    <p class="para editable block" id="frost-ch06_s03_p02">Even our simple store must collect and display data from a database. We collect data about each app—what it is called, its description, and the link to the student page. We also collect data about each sale—who purchased what and when.</p>
+    <p class="para editable block" id="frost-ch06_s03_p03">Every time you register on a website, your registration information is stored in a database. Similarly, when you make an online purchase the information is stored in a database. If you play online games, your scores are stored in a database. Websites constantly capture customer data in order to improve their services.</p>
+    <p class="para editable block" id="frost-ch06_s03_p04">A <span class="margin_term"><a class="glossterm">database</a><span class="glossdef">A collection of one or more related tables of data stored in rows and columns.</span></span> is a collection of one or more related tables of data stored in rows and columns. By this definition even a spreadsheet is a simple database. However, many business databases consist of multiple files that are interrelated. Databases may be searched, sorted, and summarized to display information. Most businesses would not function without databases of information. For example, imagine a bank trying to function without its database of customer and account information.</p>
+    <p class="para editable block" id="frost-ch06_s03_p05">Information is usually entered into a database using a <span class="margin_term"><a class="glossterm">form</a><span class="glossdef">A user-friendly way to get information into a database.</span></span>. Each form normally corresponds to a single record or row in the database. Each field in the form normally corresponds to a single column or cell in that record. The form helps ensure that correct information is entered. Drop down menus in particular help ensure that users do not type in gibberish.</p>
+    <p class="para editable block" id="frost-ch06_s03_p06">Just a short time ago, only professional programmers could save website information to a database. There are now tools that make this functionality easily accessible. The simplest example of <span class="margin_term"><a class="glossterm">database integration</a><span class="glossdef">The ability to capture and store information gathered from a form into a database. Database integration also refers to the ability to extract and display information from a database on a website.</span></span> is to save information to a one table database. The simplest one table database is a spreadsheet.</p>
+    <p class="para editable block" id="frost-ch06_s03_p07">Information is extracted from databases in the form of reports. The simplest report is a listing of all the records in the database. However, most reports summarize the information in a way that is helpful to business managers so that they can make data driven decisions. For example, a report might show total sales by product allowing managers to adjust inventory to meet demand.</p>
+    <p class="para editable block" id="frost-ch06_s03_p08">One very interesting use of database information is to create custom web pages. For example, imagine you have purchased multiple items from <a class="link" href="http://amazon.com">Amazon.com</a>. Amazon keeps track of your purchases and those of millions of other customers. By looking for patterns of buying behavior in its database, Amazon is able to suggest products you might like based on the buying behavior of customers who match your purchase profile.</p>
+    <div class="section" id="frost-ch06_s03_s01" version="5.0" lang="en">
+        <h2 class="title editable block">Save Website Data to a File</h2>
+        <p class="para editable block" id="frost-ch06_s03_s01_p01">While the site registration and sale forms are created by the professor, we would like you to have some experience with data integration. Therefore, you will make a form whereby users can register with your site to receive product update information even without making a purchase.</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p02">Because the form includes the customer’s email address, the information is a valuable resource for future mass mailings. If used judiciously, such mass mailings are appreciated by customers; if overused they are considered spam.</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p03">Google Docs lets you create a form to accept customer information and then stores the information in a spreadsheet. In other words, when you create a form, you get both a form and a spreadsheet automatically.</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p04">Start Google Docs</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p05">Create New &gt; Form</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p06">Complete the form so that it looks similar to the form below. After completing each field you need to click Done. The first two fields are already on the form. To get the third field, check Add item. Then save the form.</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p07">Add the form to your web page from the same menu that you use to insert gadgets, calendars, and so forth. Then exit edit mode and practice filling in the form.</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p08">Return to Google Docs. You will see a spreadsheet listed with the same name as your form. Open the spreadsheet to view the captured data.</p>
+        <div class="informalfigure large block">
+            <img src="section_10/fb49fd9ac11dda35f39cfbe595e15af1.png">
+            <p class="para">Google Docs allows you to develop an input form, which you can then embed in a page of your website. Data entered into the form by users is automatically saved in a Google spreadsheet. Each user record becomes a new row in the spreadsheet.</p>
+        </div>
+        <div class="key_takeaways editable block" id="frost-ch06_s03_s01_n01">
+            <h3 class="title">Key Takeaways</h3>
+            <ul class="itemizedlist" id="frost-ch06_s03_s01_l01" mark="bullet">
+                <li>The ability to capture and store customer data using a Google Docs form and spreadsheet is the first step toward database integration. Full database integration allows you to customize pages for individual customers.</li>
+            </ul>
+        </div>
+        <div class="exercises editable block" id="frost-ch06_s03_s01_n02">
+            <h3 class="title">Questions and Exercises</h3>
+            <ol class="orderedlist" id="frost-ch06_s03_s01_o01" numeration="arabic">
+                <li>A spreadsheet is sometimes referred to as a one table database. Describe a business problem requiring more than one table?</li>
+                <li>Why do websites make such heavy use of drop down menus for filling in forms?</li>
+            </ol>
+        </div>
+        <div class="callout editable block" id="frost-ch06_s03_s01_n04">
+            <h3 class="title">Techniques</h3>
+            <p class="para" id="frost-ch06_s03_s01_p12">The following techniques, found in the Google section of the Cloud Computing software reference, may be useful in completing the assignments for this chapter: <strong class="emphasis bold">Overview Map of Interface • Share a Document • Create a Form • Background Color • Copyright in Sidebar • Page Layout • Content-Delete “Comments and Attachments” and the Default Page • Title • Page-Create New • Gadgets-Insert • Logo-Insert</strong></p>
+        </div>
+        <div class="exercises editable block" id="frost-ch06_s03_s01_n03">
+            <h3 class="title">L3 Assignment: Develop a Website</h3>
+            <p class="para" id="frost-ch06_s03_s01_p09">In this assignment you create a working website prototype to help market your app. Your site will become part of the class app store.</p>
+            <p class="simpara">Setup</p>
+            <p class="para" id="frost-ch06_s03_s01_p10">Sign on to your Gmail account. Select Sites from the More menu.</p>
+            <p class="simpara">Content and Style</p>
+            <ul class="itemizedlist" id="frost-ch06_s03_l01" mark="bullet">
+                <li>Follow all graphic design and usability principles.</li>
+                <li>Follow your design plan. You may make some changes as necessary. However, the bottom line is that you should meet the requirements that you laid out earlier.</li>
+                <li>You will be creating three pages in the Class App store. Your logo should appear in the upper left corner of each page.</li>
+                <li>
+                    <p class="para">Homepage</p>
+                    <ul class="itemizedlist" id="frost-ch06_s03_l02" mark="bullet">
+                        <li>Text describing your app and its features and benefits</li>
+                        <li>Show at least six screenshots of your app with a link to purchase the app. For ease of viewing without scrolling horizontally, the screenshots should be in a two row table.</li>
+                        <li>Provide a form where people can register for email updates about your product.</li>
+                        <li>Provide a link back to the Store in your navigation panel.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="para">About Us</p>
+                    <ul class="itemizedlist" id="frost-ch06_s03_l06" mark="bullet">
+                        <li>Describe your business soft skills.</li>
+                        <li>Include your name, picture, and email address.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="para">Blog</p>
+                    <ul class="itemizedlist" id="frost-ch06_s03_l07" mark="bullet">
+                        <li>Include at least two entries in the blog. For example, you might describe how you came up with the idea or who the target market is for your product or discuss future plans.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="para">Extra Credit (if you make it work)</p>
+                    <ul class="itemizedlist" id="frost-ch06_s03_l08" mark="bullet">
+                        <li>Show a real time counter on your home page of how many people have purchased your app. Your counter will use a query similar to that found on the main store site.</li>
+                    </ul>
+                </li>
+                <li>Your pages MUST tie in thematically with the Class App store. You may have an original design, but it MUST be obvious to the user (the grader) that they are still in the same store. Using the same theme or a similar theme family is the most obvious way to do this.</li>
+                <li>Register your site with the professor’s online store.</li>
+                <li>Embed a working Buy link on your homepage.</li>
+                <li>Buy your own app just once to make sure that your Buy link is working. Register for email updates to make sure that your form is working. Check this by viewing the report on your homepage.</li>
+                <li>Turn on Google Analytics from the Manage Sites menu using ID number provided by your professor. Do this last after you have thoroughly tested your site.</li>
+            </ul>
+            <p class="simpara">Deliverables</p>
+            <p class="para" id="frost-ch06_s03_s01_p11">Electronic submission: Post a WORKING link to your website. Paper submission: Create a printout of each screen of your site.</p>
+            <p class="simpara">Shopping</p>
+            <p class="para" id="frost-ch06_s03_s01_p13">After everyone’s site is posted the professor will open the store for shopping. At that point you need to buy 10 apps of your choice.</p>
+            <div class="informalfigure large">
+                <img src="section_10/f149a07953845fc2b903d8bfc60a2fa0.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  
+  <div id=navbar-bottom class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s09-planning-usable-websites-desig.html"><img src="shared/images/batch-left.png"></a> <a href="s09-planning-usable-websites-desig.html">Previous Chapter</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s11-knowledge-with-information-sys.html">Next Chapter</a> <a href="s11-knowledge-with-information-sys.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="shared/book.js"></script>
+  
+  
+</body>
+</html>

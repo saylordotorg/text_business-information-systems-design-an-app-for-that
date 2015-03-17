@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="shared/bookhub.css" rel="stylesheet" type="text/css">
+  <title>The Big Picture</title>
+</head>
+<body>
+
+  
+  <div id=navbar-top class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s05-02-designing-information-systems.html"><img src="shared/images/batch-left.png"></a> <a href="s05-02-designing-information-systems.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s06-00-information-systems-to-enhance.html">Next Section</a> <a href="s06-00-information-systems-to-enhance.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  <div id="book-content">
+    <div class="section" id="frost-ch01_s03" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">1.3</span> The Big Picture</h2>
+    <div class="learning_objectives editable block" id="frost-ch01_s03_n01">
+        <h3 class="title">Learning Objective</h3>
+        <ol class="orderedlist" id="frost-ch01_s03_o01" numeration="arabic">
+            <li>Compare and contrast Enterprise, Collaboration and Collaboration systems</li>
+        </ol>
+    </div>
+    <div class="section" id="frost-ch01_s03_s01" version="5.0" lang="en">
+        <h2 class="title editable block">Business Information Systems</h2>
+        <p class="para editable block" id="frost-ch01_s03_s01_p01">Most information systems can be grouped into three broad classifications—enterprise systems (ES), knowledge management/collaboration systems, and business intelligence (BI) systems. These collectively comprise the <span class="margin_term"><a class="glossterm">information systems architecture</a><span class="glossdef">The high level view of corporate systems—usually divided into enterprise systems, knowledge management/collaboration systems and business intelligence systems.</span></span> for an enterprise.</p>
+        <p class="para editable block" id="frost-ch01_s03_s01_p02"><span class="margin_term"><a class="glossterm">Enterprise systems</a><span class="glossdef">Systems that manage day to day transactions of the business.</span></span> are used to manage the day to day business processes. <span class="margin_term"><a class="glossterm">Supply chain management</a><span class="glossdef">Controlling the flow of raw materials and finished products into and out of the business.</span></span> (SCM) controls inbound and outbound logistics. <span class="margin_term"><a class="glossterm">Customer relationship management</a><span class="glossdef">Controlling communications with the customer to advance marketing goals</span></span> (CRM) manages communications and marketing initiatives directed at customers. However, the grandaddy of them all are <span class="margin_term"><a class="glossterm">enterprise resource planning</a><span class="glossdef">The largest systems of all. ERP systems tie together all aspects of the business from accounting to the shop floor.</span></span> (ERP) systems that control business transactions from accounts payable/receivable to product movement on the factory floor.</p>
+        <p class="para editable block" id="frost-ch01_s03_s01_p03">If this seems dense now, don’t worry about it. Books have been written about all these pieces. What is important for you to see is that ideally all the systems are smoothly coordinated so that management makes information driven decisions.</p>
+        <p class="para editable block" id="frost-ch01_s03_s01_p04">All of these enterprise systems communicate and share information as needed. They also store each of their activities in databases. At regular intervals these databases are copied into a centrally located data warehouse. The copying process is called <strong class="emphasis bold">extract, transform and load</strong> (ETL). Data is extracted from the multiple databases, transformed to a common format, and then loaded into the data warehouse.</p>
+        <p class="para editable block" id="frost-ch01_s03_s01_p05">The <span class="margin_term"><a class="glossterm">data warehouse</a><span class="glossdef">A repository of corporate data collected from many corporate databases.</span></span> then becomes a gold mine of data about the business. The beauty of the data warehouse is that it can be queried offline without interrupting operations of the business. However, the data warehouse is only as useful as the systems that query it for information. These are called <span class="margin_term"><a class="glossterm">business intelligence</a><span class="glossdef">The process of analyzing data to spot trends and opportunities.</span></span> (BI) systems. One of the most well known types of BI systems is for advanced reporting or <span class="margin_term"><a class="glossterm">data mining</a><span class="glossdef">A form of BI that automatically looks for trends or patterns in the data.</span></span>. BI systems look to spot trends in the data and then convey that information to the appropriate management level. For example, BI systems discovered years ago that diapers and beer were often purchased in the same supermarket visit. Clever marketing sleuths concluded that dad sent out to buy diapers was also picking up a 6 pack on his way out of the store. This creates opportunities for product placement—locating the beer closer to the diapers.</p>
+        <p class="para editable block" id="frost-ch01_s03_s01_p06"><span class="margin_term"><a class="glossterm">Knowledge management</a><span class="glossdef">Capture and index knowledge from past projects usually in text form.</span></span> and <span class="margin_term"><a class="glossterm">collaboration systems</a><span class="glossdef">Allow multiple users to work on projects together—even when geographically separated.</span></span> are ways that members of the organization capture and institutionalize organizational knowledge. The most familiar types of systems are internal websites for the company as well as blogs and wikis. However, leading organizations will also require that reports be filed in a systematic way to allow for easy retrieval in case the organization encounters a similar business problem in the future.</p>
+        <div class="informalfigure large block">
+            <img src="section_05/e44319ac0c7b1a448ce5c2e80d0c7f56.png">
+            <p class="para">The big picture of information systems architecture. We will touch all these systems—albeit at a surface level. We will create a store that handles customer relationship management (CRM). Blackboard and similar systems are examples of collaboration systems. Finally, we will analyze our sales data as a form of business intelligence.</p>
+        </div>
+        <div class="key_takeaways editable block" id="frost-ch01_s03_s01_n01">
+            <h3 class="title">Key Takeaways</h3>
+            <ul class="itemizedlist" id="frost-ch01_s03_s01_l01" mark="bullet">
+                <li>Most business information systems can be classified as enterprise systems, collaboration systems, or business intelligence systems.</li>
+                <li>Ideally all these systems smoothly exchange data to help managers make information driven decisions.</li>
+            </ul>
+        </div>
+        <div class="exercises editable block" id="frost-ch01_s03_s01_n02">
+            <h3 class="title">Questions and Exercises</h3>
+            <ol class="orderedlist" id="frost-ch01_s03_s01_o01" numeration="arabic">
+                <li>In Good to Great, Jim Collins quotes former Kroger CEO, Lyle Everingham, on how Kroger management made the decision to pursue the Superstore concept, “Basically, we did extensive research, and the data came back loud and clear: The super—combination stores were the way of the future.” Which of the information architecture systems could produce such data? Explain.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+  </div>
+  
+  <div id=navbar-bottom class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s05-02-designing-information-systems.html"><img src="shared/images/batch-left.png"></a> <a href="s05-02-designing-information-systems.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s06-00-information-systems-to-enhance.html">Next Section</a> <a href="s06-00-information-systems-to-enhance.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="shared/book.js"></script>
+  
+  
+</body>
+</html>

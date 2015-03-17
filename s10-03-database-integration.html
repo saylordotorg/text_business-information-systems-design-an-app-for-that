@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="shared/bookhub.css" rel="stylesheet" type="text/css">
+  <title>Database Integration</title>
+</head>
+<body>
+
+  
+  <div id=navbar-top class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s10-02-google-sites.html"><img src="shared/images/batch-left.png"></a> <a href="s10-02-google-sites.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s11-01-development-options-and-costs.html">Next Section</a> <a href="s11-01-development-options-and-costs.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  <div id="book-content">
+    <div class="section" id="frost-ch06_s03" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">6.3</span> Database Integration</h2>
+    <div class="learning_objectives editable block" id="frost-ch06_s03_n01">
+        <h3 class="title">Learning Objectives</h3>
+        <ol class="orderedlist" id="frost-ch06_s03_o01" numeration="arabic">
+            <li>Explain why websites need to capture and display data</li>
+            <li>Explain the role of a form in capturing data</li>
+            <li>Create a form that captures data and saves it to a Google spreadsheet</li>
+        </ol>
+    </div>
+    <p class="para editable block" id="frost-ch06_s03_p02">Even our simple store must collect and display data from a database. We collect data about each app—what it is called, its description, and the link to the student page. We also collect data about each sale—who purchased what and when.</p>
+    <p class="para editable block" id="frost-ch06_s03_p03">Every time you register on a website, your registration information is stored in a database. Similarly, when you make an online purchase the information is stored in a database. If you play online games, your scores are stored in a database. Websites constantly capture customer data in order to improve their services.</p>
+    <p class="para editable block" id="frost-ch06_s03_p04">A <span class="margin_term"><a class="glossterm">database</a><span class="glossdef">A collection of one or more related tables of data stored in rows and columns.</span></span> is a collection of one or more related tables of data stored in rows and columns. By this definition even a spreadsheet is a simple database. However, many business databases consist of multiple files that are interrelated. Databases may be searched, sorted, and summarized to display information. Most businesses would not function without databases of information. For example, imagine a bank trying to function without its database of customer and account information.</p>
+    <p class="para editable block" id="frost-ch06_s03_p05">Information is usually entered into a database using a <span class="margin_term"><a class="glossterm">form</a><span class="glossdef">A user-friendly way to get information into a database.</span></span>. Each form normally corresponds to a single record or row in the database. Each field in the form normally corresponds to a single column or cell in that record. The form helps ensure that correct information is entered. Drop down menus in particular help ensure that users do not type in gibberish.</p>
+    <p class="para editable block" id="frost-ch06_s03_p06">Just a short time ago, only professional programmers could save website information to a database. There are now tools that make this functionality easily accessible. The simplest example of <span class="margin_term"><a class="glossterm">database integration</a><span class="glossdef">The ability to capture and store information gathered from a form into a database. Database integration also refers to the ability to extract and display information from a database on a website.</span></span> is to save information to a one table database. The simplest one table database is a spreadsheet.</p>
+    <p class="para editable block" id="frost-ch06_s03_p07">Information is extracted from databases in the form of reports. The simplest report is a listing of all the records in the database. However, most reports summarize the information in a way that is helpful to business managers so that they can make data driven decisions. For example, a report might show total sales by product allowing managers to adjust inventory to meet demand.</p>
+    <p class="para editable block" id="frost-ch06_s03_p08">One very interesting use of database information is to create custom web pages. For example, imagine you have purchased multiple items from <a class="link" href="http://amazon.com">Amazon.com</a>. Amazon keeps track of your purchases and those of millions of other customers. By looking for patterns of buying behavior in its database, Amazon is able to suggest products you might like based on the buying behavior of customers who match your purchase profile.</p>
+    <div class="section" id="frost-ch06_s03_s01" version="5.0" lang="en">
+        <h2 class="title editable block">Save Website Data to a File</h2>
+        <p class="para editable block" id="frost-ch06_s03_s01_p01">While the site registration and sale forms are created by the professor, we would like you to have some experience with data integration. Therefore, you will make a form whereby users can register with your site to receive product update information even without making a purchase.</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p02">Because the form includes the customer’s email address, the information is a valuable resource for future mass mailings. If used judiciously, such mass mailings are appreciated by customers; if overused they are considered spam.</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p03">Google Docs lets you create a form to accept customer information and then stores the information in a spreadsheet. In other words, when you create a form, you get both a form and a spreadsheet automatically.</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p04">Start Google Docs</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p05">Create New &gt; Form</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p06">Complete the form so that it looks similar to the form below. After completing each field you need to click Done. The first two fields are already on the form. To get the third field, check Add item. Then save the form.</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p07">Add the form to your web page from the same menu that you use to insert gadgets, calendars, and so forth. Then exit edit mode and practice filling in the form.</p>
+        <p class="para editable block" id="frost-ch06_s03_s01_p08">Return to Google Docs. You will see a spreadsheet listed with the same name as your form. Open the spreadsheet to view the captured data.</p>
+        <div class="informalfigure large block">
+            <img src="section_10/fb49fd9ac11dda35f39cfbe595e15af1.png">
+            <p class="para">Google Docs allows you to develop an input form, which you can then embed in a page of your website. Data entered into the form by users is automatically saved in a Google spreadsheet. Each user record becomes a new row in the spreadsheet.</p>
+        </div>
+        <div class="key_takeaways editable block" id="frost-ch06_s03_s01_n01">
+            <h3 class="title">Key Takeaways</h3>
+            <ul class="itemizedlist" id="frost-ch06_s03_s01_l01" mark="bullet">
+                <li>The ability to capture and store customer data using a Google Docs form and spreadsheet is the first step toward database integration. Full database integration allows you to customize pages for individual customers.</li>
+            </ul>
+        </div>
+        <div class="exercises editable block" id="frost-ch06_s03_s01_n02">
+            <h3 class="title">Questions and Exercises</h3>
+            <ol class="orderedlist" id="frost-ch06_s03_s01_o01" numeration="arabic">
+                <li>A spreadsheet is sometimes referred to as a one table database. Describe a business problem requiring more than one table?</li>
+                <li>Why do websites make such heavy use of drop down menus for filling in forms?</li>
+            </ol>
+        </div>
+        <div class="callout editable block" id="frost-ch06_s03_s01_n04">
+            <h3 class="title">Techniques</h3>
+            <p class="para" id="frost-ch06_s03_s01_p12">The following techniques, found in the Google section of the Cloud Computing software reference, may be useful in completing the assignments for this chapter: <strong class="emphasis bold">Overview Map of Interface • Share a Document • Create a Form • Background Color • Copyright in Sidebar • Page Layout • Content-Delete “Comments and Attachments” and the Default Page • Title • Page-Create New • Gadgets-Insert • Logo-Insert</strong></p>
+        </div>
+        <div class="exercises editable block" id="frost-ch06_s03_s01_n03">
+            <h3 class="title">L3 Assignment: Develop a Website</h3>
+            <p class="para" id="frost-ch06_s03_s01_p09">In this assignment you create a working website prototype to help market your app. Your site will become part of the class app store.</p>
+            <p class="simpara">Setup</p>
+            <p class="para" id="frost-ch06_s03_s01_p10">Sign on to your Gmail account. Select Sites from the More menu.</p>
+            <p class="simpara">Content and Style</p>
+            <ul class="itemizedlist" id="frost-ch06_s03_l01" mark="bullet">
+                <li>Follow all graphic design and usability principles.</li>
+                <li>Follow your design plan. You may make some changes as necessary. However, the bottom line is that you should meet the requirements that you laid out earlier.</li>
+                <li>You will be creating three pages in the Class App store. Your logo should appear in the upper left corner of each page.</li>
+                <li>
+                    <p class="para">Homepage</p>
+                    <ul class="itemizedlist" id="frost-ch06_s03_l02" mark="bullet">
+                        <li>Text describing your app and its features and benefits</li>
+                        <li>Show at least six screenshots of your app with a link to purchase the app. For ease of viewing without scrolling horizontally, the screenshots should be in a two row table.</li>
+                        <li>Provide a form where people can register for email updates about your product.</li>
+                        <li>Provide a link back to the Store in your navigation panel.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="para">About Us</p>
+                    <ul class="itemizedlist" id="frost-ch06_s03_l06" mark="bullet">
+                        <li>Describe your business soft skills.</li>
+                        <li>Include your name, picture, and email address.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="para">Blog</p>
+                    <ul class="itemizedlist" id="frost-ch06_s03_l07" mark="bullet">
+                        <li>Include at least two entries in the blog. For example, you might describe how you came up with the idea or who the target market is for your product or discuss future plans.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="para">Extra Credit (if you make it work)</p>
+                    <ul class="itemizedlist" id="frost-ch06_s03_l08" mark="bullet">
+                        <li>Show a real time counter on your home page of how many people have purchased your app. Your counter will use a query similar to that found on the main store site.</li>
+                    </ul>
+                </li>
+                <li>Your pages MUST tie in thematically with the Class App store. You may have an original design, but it MUST be obvious to the user (the grader) that they are still in the same store. Using the same theme or a similar theme family is the most obvious way to do this.</li>
+                <li>Register your site with the professor’s online store.</li>
+                <li>Embed a working Buy link on your homepage.</li>
+                <li>Buy your own app just once to make sure that your Buy link is working. Register for email updates to make sure that your form is working. Check this by viewing the report on your homepage.</li>
+                <li>Turn on Google Analytics from the Manage Sites menu using ID number provided by your professor. Do this last after you have thoroughly tested your site.</li>
+            </ul>
+            <p class="simpara">Deliverables</p>
+            <p class="para" id="frost-ch06_s03_s01_p11">Electronic submission: Post a WORKING link to your website. Paper submission: Create a printout of each screen of your site.</p>
+            <p class="simpara">Shopping</p>
+            <p class="para" id="frost-ch06_s03_s01_p13">After everyone’s site is posted the professor will open the store for shopping. At that point you need to buy 10 apps of your choice.</p>
+            <div class="informalfigure large">
+                <img src="section_10/f149a07953845fc2b903d8bfc60a2fa0.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  
+  <div id=navbar-bottom class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s10-02-google-sites.html"><img src="shared/images/batch-left.png"></a> <a href="s10-02-google-sites.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s11-01-development-options-and-costs.html">Next Section</a> <a href="s11-01-development-options-and-costs.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="shared/book.js"></script>
+  
+  
+</body>
+</html>

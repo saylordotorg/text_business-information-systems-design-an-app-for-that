@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="shared/bookhub.css" rel="stylesheet" type="text/css">
+  <title>Databases</title>
+</head>
+<body>
+
+  
+  <div id=navbar-top class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s14-01-business-intelligence.html"><img src="shared/images/batch-left.png"></a> <a href="s14-01-business-intelligence.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s15-01-pros-and-cons-of-powerpoint.html">Next Section</a> <a href="s15-01-pros-and-cons-of-powerpoint.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  <div id="book-content">
+    <div class="section" id="frost-ch10_s02" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">10.2</span> Databases</h2>
+    <div class="learning_objectives editable block" id="frost-ch10_s02_n01">
+        <h3 class="title">Learning Objectives</h3>
+        <ol class="orderedlist" id="frost-ch10_s02_o01" numeration="arabic">
+            <li>Determine which tables and fields in a database are needed to complete a query</li>
+            <li>Explain how data is captured in our Class App store</li>
+            <li>Explain how the Class App store data can be used for business intelligence</li>
+        </ol>
+    </div>
+    <div class="section" id="frost-ch10_s02_s01" version="5.0" lang="en">
+        <h2 class="title editable block">Introduction</h2>
+        <p class="para editable block" id="frost-ch10_s02_s01_p01">In all of the forms of BI described above, you must actually store data to analyze. Organizations store their data in databases connected to their production systems. Here are some examples:</p>
+        <ul class="itemizedlist editable block" id="frost-ch10_s02_s01_l01" mark="bullet">
+            <li>Banking transaction systems store data in databases containing information about customers, accounts, and transactions against those accounts.</li>
+            <li>University enrollment systems store data in databases containing information about students, faculty, courses, and enrollment in those courses.</li>
+            <li>Cell phone billing systems store data in databases containing information about customers, rate plans, and calls made.</li>
+            <li>Credit card billing systems store data in databases containing information about customers, credit plans, and items charged.</li>
+            <li>Supermarket checkout systems store data in databases containing information about customers, products, and buying habits of their customers. The loyalty card that you have swiped at the checkout ties all your purchases back to your name.</li>
+        </ul>
+        <p class="para editable block" id="frost-ch10_s02_s01_p02">What do these databases actually look like? They consist of tables of data that are related to each other. This is called a <span class="margin_term"><a class="glossterm">relational database</a><span class="glossdef">A database that consists of related tables and nothing but tables. The relationships among tables are established by repeating key fields. For example, the customer id field would be repeated in the account table for a bank.</span></span>. Each table must have a unique identifier that is called a <span class="margin_term"><a class="glossterm">primary key</a><span class="glossdef">One or more fields that together uniquely identify each record in a table.</span></span>. The database is organized into <span class="margin_term"><a class="glossterm">parent and child tables</a><span class="glossdef">To avoid duplicate data, store information common to each child in the parent table. Parent tables point to child tables in a diagram. However, the real link between them is made using a foreign key.</span></span> to avoid duplicating data. Data common to each child is stored in the parent table. Diagrammatically a parent table points to its child tables. Each parent record can have zero or more child records. To logically link the tables together simply repeat the primary key as a <span class="margin_term"><a class="glossterm">foreign key</a><span class="glossdef">Repeat the primary key from the parent table in each corresponding record of the child table as a foreign key to link tables together.</span></span> in each corresponding record of the child table. To get information in and out of a relational database requires a relational database management system (RDBMS) such as Microsoft Access. The goal of the system is to facilitate transactions while safe guarding the integrity of the data.</p>
+        <p class="para editable block" id="frost-ch10_s02_s01_p03">The theory behind database design is one of the most elegant areas in all of information systems. If you continue in information systems, you will see it in detail. However, for our purposes all we need to know is that data is typically stored in multiple files even if the report that we get is contained in a single file. Why? The simple answer is that we want to avoid <span class="margin_term"><a class="glossterm">duplicate data</a><span class="glossdef">Storing some fact about the world more than once. It is the number one sin in database design because duplicate data might become inconsistent.</span></span> by storing information common to each child in the parent table. Why do we care? Because duplicate data opens up the possibility that one of the duplicates will be different in an important way. For example you would not want your bank balance to be sometimes one number, sometimes another depending on which record happens to be called up by the database.</p>
+        <div class="informalfigure large block">
+            <img src="section_14/19c60e27f23bdda85e3435804953bb05.png">
+            <p class="para">The data from the Class App store is stored in a relational database consisting of two tables—an APP table and a SALES table. The primary key of the APP table is App name. The primary key of the SALES table is the combination of Timestamp and App name. App name in the SALES table is also a foreign key linking each sale with its corresponding App.</p>
+        </div>
+    </div>
+    <div class="section" id="frost-ch10_s02_s02" version="5.0" lang="en">
+        <h2 class="title editable block">Architecture of Class App Store</h2>
+        <p class="para editable block" id="frost-ch10_s02_s02_p01">The Class App store created for this course has at its heart a simple database. Nonetheless, that database supports some fairly sophisticated functionality. The beauty of the Class App store is that it was created almost entirely without writing code, by using Google Sites and Google Docs.</p>
+        <p class="para editable block" id="frost-ch10_s02_s02_p02">The database consists of two tables—an App table and a Sales table. The App table captures registration information about each app. The Sales table captures sales information—who bought what and when.</p>
+        <p class="para editable block" id="frost-ch10_s02_s02_p03">Conceptually the tables are linked by what is called a <span class="margin_term"><a class="glossterm">one to many relationship</a><span class="glossdef">The type of relationship formed between parent and child tables. One parent record has zero or more child records.</span></span>. One app has many sales. Every database has one to many links of this sort. The relationships are formed by the primary key to foreign key correspondence.</p>
+        <p class="para editable block" id="frost-ch10_s02_s02_p04">Once the architecture is established the next step is to get data in and out of the database. Data is entered into a database using <span class="margin_term"><a class="glossterm">forms</a><span class="glossdef">A way to get information into a database. Each field in the form corresponds to a field in the database table.</span></span>. For the App table, use the Register App form. For the Sales table, use the Purchase App form.</p>
+        <p class="para editable block" id="frost-ch10_s02_s02_p05">Data is extracted from the database using <span class="margin_term"><a class="glossterm">reports</a><span class="glossdef">A way to get information out of a database. Often a report will gather information together from multiple tables and present it as a single table.</span></span>. The listing of apps on the Class App store home page is a report.</p>
+        <p class="para editable block" id="frost-ch10_s02_s02_p06">When the reports involve summary data, we would characterize that as meaningful information. For example, listing the best selling apps and the top rated apps qualifies as information. The number of apps purchased by each student is also information—it reveals how many students have completed the assignment.</p>
+        <p class="para editable block" id="frost-ch10_s02_s02_p07">And there are a variety of reports that can come out of even a simple database such as this. For example, a report might list the best selling apps for men who are freshmen. One can be quite specific as to the information extracted for analysis.</p>
+        <div class="informalfigure large block">
+            <img src="section_14/31c6b0e92a83fe9aab769ee2f547ae7c.png">
+            <p class="para">Architecture of the Class App store. Even this simple database requires two forms and four reports.</p>
+        </div>
+    </div>
+    <div class="section" id="frost-ch10_s02_s03" version="5.0" lang="en">
+        <h2 class="title editable block">Group and Summarize Data</h2>
+        <p class="para editable block" id="frost-ch10_s02_s03_p01">We will analyze the sales data for our own app store to find trends in buying patterns for the class. Distilling that data and finding meaningful patterns is a form of business intelligence.</p>
+        <p class="para editable block" id="frost-ch10_s02_s03_p02">The important concepts here are to group and summarize data, and then to order and compare groups. For example, showing a list of the best selling apps. Creating this list requires counting total sales for each app and then listing those totals in descending order.</p>
+        <p class="para editable block" id="frost-ch10_s02_s03_p03">To do this in real time requires sending a query to the store typically written in a language called <span class="margin_term"><a class="glossterm">Structured Query Language (SQL)</a><span class="glossdef">Structured Query Language (SQL) is the language used by most relational database management systems. It requires very little code to accomplish powerful operations.</span></span>. This is how we were able to get the store to display tables of best selling and top rated apps. The query looks similar to this:</p>
+        <p class="para editable block" id="frost-ch10_s02_s03_p04">select App, count(Timestamp)</p>
+        <p class="para editable block" id="frost-ch10_s02_s03_p05">group by App</p>
+        <p class="para editable block" id="frost-ch10_s02_s03_p06">order by count(Timestamp) desc, App asc</p>
+        <p class="para editable block" id="frost-ch10_s02_s03_p07">Translation: select the app name and count the number of records (timestamps) for that app. Produce a subtotal (group by) for each App name. Then order the subtotals in descending order. If two apps have the same subtotal, then order them alphabetically.</p>
+        <p class="para editable block" id="frost-ch10_s02_s03_p08">However, SQL is beyond the scope of this course. What is within the scope of the course is to download and analyze the data in a spreadsheet. Database data can be downloaded and then analyzed using Excel pivot tables. A <span class="margin_term"><a class="glossterm">pivot table</a><span class="glossdef">A visual query tool in Excel that allows you to easily group and summarize data.</span></span> is a visual query tool that allows you to answer sophisticated questions without writing any SQL code.</p>
+        <div class="informalfigure large block">
+            <img src="section_14/b9bae16126bb69df5dc00fff33adfd55.png">
+            <p class="para">Data is sorted by timestamp above left and by app above right. However, neither sorting produces useful information. Left we download and then group, summarize and sort the data by sales in descending order to reveal the top selling apps. This is meaningful information. “Count of Email” means that we are counting the number of email addresses registered for each app. We count emails since they are unique whereas names might not be. This analysis is performed using an Excel pivot table on the downloaded data.</p>
+        </div>
+    </div>
+    <div class="section" id="frost-ch10_s02_s04" version="5.0" lang="en">
+        <h2 class="title editable block">Multi-Table Databases</h2>
+        <p class="para editable block" id="frost-ch10_s02_s04_p01">The problem with one table databases is that we are limited to querying the data that happens to be in that table. For example, there is no way to see which developers bought their own apps. The sales data here shows only the buyer not the seller. The seller data is stored in a different table. What we need is a way to join information between the two tables. While joining information between tables is possible to do with a spreadsheet (using the Vlookup operation), it is rather difficult and is error prone. The best practice way to accomplish a join is using a database system such as Microsoft Access.</p>
+        <p class="para editable block" id="frost-ch10_s02_s04_p02">The magic of database systems is that they are able to make data that lives in separate tables appear to reside in the same table. Once the data appears to reside in a single table, then all of the query techniques that apply to one table databases become tools for analysis.</p>
+        <div class="informalfigure large block">
+            <img src="section_14/30ba9b6b3b80709dc57065a91497417c.png">
+            <p class="para">The APP table above and the SALES table below. A relational database is able to integrate information between the two tables.</p>
+        </div>
+        <div class="informalfigure medium block">
+            <img src="section_14/7909b0e5d01253a8af8fbb7b222c9bc5.png">
+        </div>
+    </div>
+    <div class="section" id="frost-ch10_s02_s05" version="5.0" lang="en">
+        <h2 class="title editable block">Data Warehouse</h2>
+        <p class="para editable block" id="frost-ch10_s02_s05_p01">As with many subjects in the course, it is more complicated than that. It would be relatively rare to pull business intelligence data from a live database. The drain on the system might slow down the entire business and thereby frustrate customers. Instead, corporations typically copy data from their databases into a repository called a data warehouse. The warehouse can then be queried repeatedly without affecting the production system.</p>
+        <p class="para editable block" id="frost-ch10_s02_s05_p02">Periodically, perhaps once a day, data is copied from the company’s many databases to a very large database called the <span class="margin_term"><a class="glossterm">data warehouse</a><span class="glossdef">A giant database that contains periodic dumps from many databases throughout the company. BI systems query the data warehouse to spot patterns and trends.</span></span>. The process of copying the data is called <span class="margin_term"><a class="glossterm">extract, transform, and load (ETL)</a><span class="glossdef">The process of copying data from many databases throughout the enterprise into the data warehouse.</span></span>.</p>
+        <ul class="itemizedlist editable block" id="frost-ch10_s02_s05_l01" mark="bullet">
+            <li>Extract — Copies data from one or more databases systems.</li>
+            <li>Transform — Cleans the data so that related records in different databases appear in a consistent format.</li>
+            <li>Load — Inserts the cleansed data into the data warehouse.</li>
+        </ul>
+        <p class="para editable block" id="frost-ch10_s02_s05_p03">Why go to all this trouble? One of the main reasons is that analyzing the data on the production system would slow it down considerably leading to poor customer service. Another reason to copy the data is so that multiple databases can be merged into a single data warehouse.</p>
+        <p class="para editable block" id="frost-ch10_s02_s05_p04">It is the data warehouse that is analyzed to produce management reports.</p>
+        <div class="informalfigure large block">
+            <img src="section_14/86f35c4110fa4febec9f0b574f401092.png">
+            <p class="para">Note the role of the data warehouse as the central repository for all the business intelligence data.</p>
+        </div>
+        <p class="para editable block" id="frost-ch10_s02_s05_p05"><span class="margin_term"><a class="glossterm">Latency</a><span class="glossdef">The amount of time between the occurrence of a transaction and the loading of that transaction’s information into the business intelligence system.</span></span> is the amount of time between the occurrence of a transaction and the loading of that transaction’s information into the business intelligence system. In other words it is the amount of time that passes before a manager has a distilled report in hand analyzing the operation. Some mangers are content to get a monthly update, others need daily or even hourly updates. It depends on the nature of the job. Ironically, lower level managers tend to need more up to the minute data. This is because they control the systems in real time. Upper level managers, by contrast, tend to focus on the big picture over a larger time horizon.</p>
+        <div class="key_takeaways editable block" id="frost-ch10_s02_s05_n01">
+            <h3 class="title">Key Takeaways</h3>
+            <ul class="itemizedlist" id="frost-ch10_s02_s05_l02" mark="bullet">
+                <li>Multiple corporate databases feed into a large data warehouse that is used for querying the data.</li>
+                <li>The greatest sin in database design is allowing duplicate data. Duplicate data has the potential to become inconsistent—sometimes one value, sometimes another.</li>
+                <li>The higher up a manager is in the organization, the less detail he or she needs to see in the data. In fact, detail only becomes important to an upper manager when it is needed to explain an unexpected trend.</li>
+            </ul>
+        </div>
+        <div class="exercises editable block" id="frost-ch10_s02_s05_n02">
+            <h3 class="title">Questions and Exercises</h3>
+            <ol class="orderedlist" id="frost-ch10_s02_s05_o01" numeration="arabic">
+                <li>The transform step in the ETL process can be quite involved. Research and find an example of data that needs to be cleaned.</li>
+                <li>Explain why databases beyond one table require relationships among the tables.</li>
+            </ol>
+        </div>
+        <div class="callout editable block" id="frost-ch10_s02_s05_n03">
+            <h3 class="title">Techniques</h3>
+            <p class="para" id="frost-ch10_s02_s05_p06">The following techniques, found in the Excel section of the software reference, may be useful in completing the assignments for this chapter: <strong class="emphasis bold">Pivot Table</strong></p>
+        </div>
+        <div class="exercises editable block" id="frost-ch10_s02_s05_n04">
+            <h3 class="title">L3 Assignment: Sales Data Analysis</h3>
+            <p class="para" id="frost-ch10_s02_s05_p07">How do you increase sales of your app in the store?  In order to answer that question you need to examine your competitive position in the store.  Your competitive position is defined by comparisons with other apps selling in the same category.  So if you designed a music app, then you should compare with other music apps.  There are a number of dimensions along which you can examine your competitive position: market share, unique visitors, conversion rate, personal sales, or cross selling.</p>
+            <p class="simpara">Setup</p>
+            <p class="para" id="frost-ch10_s02_s05_p08">To complete this assignment, you will need two files from your professor.  The first is the sales file from the class store.  The second is the content drilldown report from Google Analytics. Then create a new blank Excel spreadsheet with the column headings shown in the example. You need to include a row for every app that sold in your category. So if your category is music and there are ten music apps in the store, then you need to have ten rows including your own.  Your row should be boldfaced.</p>
+            <p class="simpara">Content and Style</p>
+            <p class="para" id="frost-ch10_s02_s05_p09">Number and answer all of the following questions in the space below your spreadsheet. (Use merge cells and text wrap to make sure that your answers do not exceed the width of your spreadsheet.</p>
+            <ul class="itemizedlist" id="frost-ch10_s02_l01" mark="bullet">
+                <li>Market share: Of all the sales in your category, what percentage does your app account for?  How does that compare with the competition?</li>
+                <li>Unique visitors: How many unique visitors came to your page in the store?  How does that compare to the competition?  What could you do to encourage more visits?</li>
+                <li>Conversion rate: Of all the visitors to your page, what percentage actually bought your app?  This is called the conversion rate.  How does your conversion rate compare with the competition?  What could you do to improve your conversion rate?</li>
+                <li>Personal sales: The sales records reveal who bought your app.  Some of those sales may be the result of you personally promoting the app to others in the class.  What percentage of your sales are the result of personal selling?  How many people did you try to sell that did not buy your app?  What is your closing rate? </li>
+                <li>Cross Selling: Of the people that bought your app, what other apps did they buy?  What apps cross sell well with your app?  Perhaps you could promote your app on those pages and vice versa. To find this answer you need to import the sales table into Microsoft Access and then run both of the queries listed below.  It is so worth it; the output is really interesting.</li>
+            </ul>
+            <p class="simpara">Deliverables</p>
+            <p class="para" id="frost-ch10_s02_s05_p10">Electronic submission: Submit the Excel file electronically</p>
+            <p class="para" id="frost-ch10_s02_s05_p11">Paper submission: Please print out the Excel file in landscape view using fit to page.</p>
+            <div class="informalfigure large">
+                <img src="section_14/cff077ac93478633c0ebe7d15b1f9f16.png">
+            </div>
+            <p class="simpara">How to Find the Cross Selling Information</p>
+            <p class="para" id="frost-ch10_s02_s05_p12">Begin by importing the sales data into a blank database in MS Access.  Under the External Data tab select Excel and follow the screen prompts. The worksheet should come in as the RawData table or whatever name your professor calls it.</p>
+            <p class="para" id="frost-ch10_s02_s05_p13">Now you will create two queries to run against the table. The first query, PurchasedTogether, creates a new row for each combination bought by a customer. For example, (WickedCrazyApp, CoolMusicApp), (BogusFlowerApp, IntenseAwesomeApp) and so forth. The logic of this query is to find all records from both tables where the emails match but the apps purchased do not. To create this query go to Create &gt; Query Design and add the RawData table <em class="emphasis">twice</em> in the query design process. The second version of the table is called RawData_1. Drag a connector from one email field to the other to join the Email fields from both tables. (The example shown is simplified, showing only two fields.) Fill out the grid at the bottom to match the example. Run the query by clicking the red exclamation point.</p>
+            <p class="para" id="frost-ch10_s02_s05_p14">The second query, PurchasedTogetherTotals, counts how many times each combination appears. The logic of this query is to count combinations no matter who bought them. We have further limited the results to those counts greater than 4, but you can change this number as need be. To create this query you must add the PurchasedTogether query in the query design process. In other words you are doing a query of a query! Add the Total row to the grid by clicking the Σ, then fill out the rest of the grid as shown. Run the query and you have your cross selling data!</p>
+            <div class="informalfigure large">
+                <img src="section_14/9eb20da83e3e2cdf8573e912639b475d.png">
+            </div>
+            <p class="para" id="frost-ch10_s02_s05_p15">PurchasedTogether creates a new row for each combination bought by a customer. PurchasedTogetherTotals counts how many times each combination appears no matter who bought it.</p>
+            <div class="informalfigure large">
+                <img src="section_14/17f8bfbe81bc41aba20e202509ec27b2.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  
+  <div id=navbar-bottom class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s14-01-business-intelligence.html"><img src="shared/images/batch-left.png"></a> <a href="s14-01-business-intelligence.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s15-01-pros-and-cons-of-powerpoint.html">Next Section</a> <a href="s15-01-pros-and-cons-of-powerpoint.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="shared/book.js"></script>
+  
+  
+</body>
+</html>

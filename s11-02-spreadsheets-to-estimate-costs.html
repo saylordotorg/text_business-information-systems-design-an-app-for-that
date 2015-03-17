@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="shared/bookhub.css" rel="stylesheet" type="text/css">
+  <title>Spreadsheets to Estimate Costs</title>
+</head>
+<body>
+
+  
+  <div id=navbar-top class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s11-01-development-options-and-costs.html"><img src="shared/images/batch-left.png"></a> <a href="s11-01-development-options-and-costs.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s12-01-calculate-the-terms-of-a-loan.html">Next Section</a> <a href="s12-01-calculate-the-terms-of-a-loan.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  <div id="book-content">
+    <div class="section" id="frost-ch07_s02" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">7.2</span> Spreadsheets to Estimate Costs</h2>
+    <div class="learning_objectives editable block" id="frost-ch07_s02_n01">
+        <h3 class="title">Learning Objectives</h3>
+        <ol class="orderedlist" id="frost-ch07_s02_o01" numeration="arabic">
+            <li>Format a spreadsheet to make it more readable and professional in appearance.</li>
+            <li>Create an assumptions area</li>
+            <li>Name cells in a spreadsheet</li>
+            <li>Use spreadsheet names in formulas</li>
+            <li>Insert rows and columns into a spreadsheet.</li>
+            <li>Perform a sensitivity analysis</li>
+            <li>Apply graphic design principles to create professional looking spreadsheets.</li>
+        </ol>
+    </div>
+    <div class="section" id="frost-ch07_s02_s01" version="5.0" lang="en">
+        <h2 class="title editable block">Apply the C.R.A.P. Principles</h2>
+        <p class="para editable block" id="frost-ch07_s02_s01_p01">Notice the spreadsheets on the following page. The “before” spreadsheet is both sloppy and hard to read. The “after” spreadsheet uses contrast in fonts and size to focus attention on important information, and it uses alignment to create strength and clarity. Numbers and their headings are right justified, and the “Measure” category and its heading is left justified. Proximity and repetition of fonts create a professional finished look.</p>
+        <p class="para editable block" id="frost-ch07_s02_s01_p02">The “after” spreadsheet also includes three new columns: Years, Male Over/(Under), and Female earnings as a % of male earnings. These new columns are processed data or <span class="margin_term"><a class="glossterm">information</a><span class="glossdef">Data that has been processed in a meaningful way.</span></span>. Information summarizes or describes the data in a meaningful way. This information shows that disparity between male and female earnings both as an absolute value and as a percentage. To create information usually involves a formula. Formulas are written by the user to perform calculations on data. Business formulas tend to be simple, usually involving addition, subtraction, multiplication, or division. For example Male Over/(Under) subtracts female earnings from male earnings to show the difference between the two. Similarly female earnings as a percentage of male earnings divides female earnings by male earnings. Note that the information revealed by these columns tells us that there is a difference; it does not tell us why. And most information is very much like this. It needs to be interpreted in order to make business decisions, or in this case public policy decisions.</p>
+        <p class="para editable block" id="frost-ch07_s02_s01_p03">The total area of a spreadsheet often exceeds the normal width of printing paper. Address this problem by printing in <span class="margin_term"><a class="glossterm">landscape orientation</a><span class="glossdef">Printing horizontally rather than vertically on a piece of paper. The normal way to print is portrait or vertical orientation.</span></span> and by scaling the page to the width of the paper.</p>
+        <div class="informalfigure large block">
+            <img src="section_11/b5af53eeb1cf384d398a6314d1962250.png">
+            <p class="para">Formatting a spreadsheet makes an enormous difference as to its professionalism. Proper formatting also makes the data much more readable.</p>
+        </div>
+    </div>
+    <div class="section" id="frost-ch07_s02_s02" version="5.0" lang="en">
+        <h2 class="title editable block">Place Estimates in an Assumptions Area</h2>
+        <p class="para editable block" id="frost-ch07_s02_s02_p01">We mentioned previously that all forecasting involves making assumptions. These are educated guesses based upon research. However, assumptions may change over time. Ideally, you would like to be able to update your spreadsheet easily as the assumptions change. The easiest and most error free way to perform the updates is to use an assumptions area.</p>
+        <p class="para editable block" id="frost-ch07_s02_s02_p02">An <span class="margin_term"><a class="glossterm">assumptions area</a><span class="glossdef">A part of the spreadsheet, usually at the top, where the key variables are given their values.</span></span> contains all of the variables that go into your calculations. It is normally located at the top of the spreadsheet. In a perfectly designed spreadsheet, the assumptions area is the only place that you actually type a number. Every other cell in the spreadsheet is a formula that refers back directly or indirectly to the assumptions area.</p>
+        <p class="para editable block" id="frost-ch07_s02_s02_p03">Consider the Apple Commission located in cell B7. We need to know the commission in order to calculate the contribution margin—how much we make on each sale. We would expect the contribution margin <span class="margin_term"><a class="glossterm">formula</a><span class="glossdef">A mathematical operation that normally references the values contained in other cells in the spreadsheet. If the cells are referenced by name, then their values will not change when copied. If the cells are referenced by location (e.g. B6), then the values will change when copied as Excel tries to guess a pattern.</span></span> in B8 to reference B7. So the formula in B8 might look like this:</p>
+        <span class="informalequation block">
+					<span class="mathphrase">=B6*(1-B7)</span>
+				</span>
+        <p class="para editable block" id="frost-ch07_s02_s02_p05">However, that formula is not particularly informative. The problem is that Excel does not know the meaning of the numbers in B7 and B8. It does not examine the labels to the left either. If we gave cells B6 and B7 meaningful names, we could calculate contribution margin as:</p>
+        <span class="informalequation block">
+					<span class="mathphrase">=PricePerUnit*(1-AppleCommission)</span>
+				</span>
+        <p class="para editable block" id="frost-ch07_s02_s02_p07">or equivalently</p>
+        <span class="informalequation block">
+					<span class="mathphrase">=PricePerUnit-(PricePerUnit*AppleCommission)</span>
+				</span>
+        <p class="para editable block" id="frost-ch07_s02_s02_p09">Note how these names are very similar to the labels. We say very similar because cell names can not contain spaces, whereas labels can. The cell names will be hidden from view but can be used in calculations as shown above.</p>
+        <p class="para editable block" id="frost-ch07_s02_s02_p10">The place where you create the names is in the <span class="margin_term"><a class="glossterm">name box</a><span class="glossdef">The box located just above cell A1 . It is used to give names to spreadsheet cells. The names are variables, so they may not contain spaces. Also, remember to hit Enter after typing the name or it will not stick.</span></span> on the toolbar just above cell A1. Simply type the name and hit Enter. You must hit Enter or the name will not stick.</p>
+        <p class="para editable block" id="frost-ch07_s02_s02_p11">Remember cell names can not contain spaces. So “Apple_Commission” is OK and so is “AppleCommission.” However, “Apple Commission” as two words with a space in between will not work. By the way, capitalizing the first letter of each word and eliminating the spaces between words (e.g., PricePerUnit) is called <span class="margin_term"><a class="glossterm">CamelBack notation</a><span class="glossdef">Variable names created by capitalizing the first letter of each word and eliminating the spaces between words.</span></span> for obvious reasons.</p>
+        <div class="informalfigure large block">
+            <img src="section_11/0f2afdb2f10c4031d6ad2edf92d6a899.png">
+            <p class="para">In a well designed spreadsheet the only place that numbers should be updated is in the assumptions area. Every other cell references the assumptions area using formulas.</p>
+        </div>
+    </div>
+    <div class="section" id="frost-ch07_s02_s03" version="5.0" lang="en">
+        <h2 class="title editable block">Formulas are Used to Generate Information</h2>
+        <p class="para editable block" id="frost-ch07_s02_s03_p01">Our last example showed a formula in the assumptions area. It is rare to have formulas in the assumptions area. Most formulas appear in the spreadsheet proper below the assumptions area.</p>
+        <p class="para editable block" id="frost-ch07_s02_s03_p02">Let us assume that we named B4 as UnitsYear1. Then the formula in B13 is =UnitsYear1. Every formula begins with an equal sign.</p>
+        <p class="para editable block" id="frost-ch07_s02_s03_p03">B14 is a much more interesting example, and one that shows the power of Excel. We are now in Year 2 and need to represent the projected increase in sales. To represent any increase involves taking the prior value (B13) and adding the increase to it. Calculate the increase by multiplying the prior value by the percentage increase. So we get:</p>
+        <span class="informalequation block">
+					<span class="mathphrase">=B13+B13*YearlyIncrease   (700+700*100%)</span>
+				</span>
+        <p class="para editable block" id="frost-ch07_s02_s03_p04">The first B12 is the prior value; the second B12*YearlyIncrease is the amount of the increase. The great thing about this formula is that it can be copied down to the rest of the cells in column B. Simply double click or drag the bottom right corner of B13 and the rest of the column will fill as follows:</p>
+        <span class="informalequation block">
+					<span class="mathphrase">B15:  =B14+B14*YearlyIncrease  (1400+1400*100%)</span>
+				</span>
+        <span class="informalequation block">
+					<span class="mathphrase">B16:  =B15+B15*YearlyIncrease  (2800+2800*100%)</span>
+				</span>
+        <span class="informalequation block">
+					<span class="mathphrase">B17:  =B16+B16*YearlyIncrease  (5600+5600*100%)</span>
+				</span>
+        <p class="para editable block" id="frost-ch07_s02_s03_p05">Excel properly repeats the pattern without any further effort on your part! However, note carefully that this was only possible because we had earlier named B5 as YearlyIncrease. If we do not name B5 then the pattern would look like this:</p>
+        <span class="informalequation block">
+					<span class="mathphrase">B14:  =B13+B13*B5 CORRECT  (700+700*100%)</span>
+				</span>
+        <span class="informalequation block">
+					<span class="mathphrase">B15:  =B14+B14*B6 WRONG    (1400+1400*$2.00)</span>
+				</span>
+        <span class="informalequation block">
+					<span class="mathphrase">B16:  =B15+B15*B7 WRONG    (3200+3200*30%)</span>
+				</span>
+        <span class="informalequation block">
+					<span class="mathphrase">B17:  =B16+B16*B8 WRONG    (5440+5440*$1.40)</span>
+				</span>
+        <p class="para editable block" id="frost-ch07_s02_s03_p06">Excel improperly repeats the pattern moving every cell down one space each time. That is a problem for B5 in the assumptions area because the next cells down are Price Per Unit (B6=$2.00), Apple Commission (B7=30%), and Contribution Margin per Unit (B8=$1.40). These last three have nothing to do with units sold and we get gibberish instead of valuable information. What is even more frightening is that the numbers do not look obviously wrong.</p>
+        <p class="para editable block" id="frost-ch07_s02_s03_p07">So in addition to being more readable, naming cells in the assumptions area also protects us against errors when copying formulas.</p>
+        <div class="informalfigure large block">
+            <img src="section_11/6c64344d4b272b2ca5d6ee6710a851fe.png">
+            <p class="para">Above each cell in the assumptions area gets a unique name. For example, B7 is called AppleCommission (with no spaces allowed in the name). Below formulas in the calculation section reference values in the assumptions area by name. For example, the formula in B13 references the YearlyIncrease field. Such formulas may be copied down the column without fear that the formula will improperly change when copied.</p>
+        </div>
+        <div class="informalfigure large block">
+            <img src="section_11/c98270b74999bb0802879b563b00bcd4.png">
+        </div>
+    </div>
+    <div class="section" id="frost-ch07_s02_s04" version="5.0" lang="en">
+        <h2 class="title editable block">Perform a Sensitivity Analysis to Hedge Your Bets</h2>
+        <p class="para editable block" id="frost-ch07_s02_s04_p01">Any time you make assumptions, you have to allow for the possibility that you might be wrong. Since you are dealing with real money, some of which is probably yours or a relative’s, you need to know the extent of your exposure should things not work out as planned.</p>
+        <p class="para editable block" id="frost-ch07_s02_s04_p02">Therefore, it is a good idea to vary the assumptions and see what outcomes occur. This sophisticated analysis allows you to have an intelligent discussion about possible future scenarios.</p>
+        <p class="para editable block" id="frost-ch07_s02_s04_p03">A good way to conduct a <span class="margin_term"><a class="glossterm">sensitivity analysis</a><span class="glossdef">An analysis of how the outputs will change as the inputs from the assumptions area vary. You are literally trying to discover how sensitive the outputs are to changes in the inputs. The analysis helps determine how the inputs must be varied to achieve a desired result.</span></span> is using an Excel <span class="margin_term"><a class="glossterm">data table</a><span class="glossdef">A tool used to perform a sensitivity analysis. A data table allows you to vary two of the inputs and record changes to one of the outputs. Amazingly the data table performs all of the computations for each combination of inputs.</span></span>. A table can represent three variables—column headings, row headings, and the results inside the table. You vary the data in the row and column headings to observe changes inside the table. For example, assume that each cell inside the table contains the profit after Year 5. We can vary the growth rate and price per unit to see the effect on profit.</p>
+        <p class="para editable block" id="frost-ch07_s02_s04_p04">To perform these calculations without the data table would require manually changing growth rate and price per unit assumptions TWENTY times and recording the values after year 5—this is busy work. By contrast, Excel has the built in ability to create a data table.</p>
+        <p class="para editable block" id="frost-ch07_s02_s04_p05">The trickiest part of creating a data table is shown by the highlighted cells in the spreadsheet. You must repeat the value from your calculations on which you wish to perform the analysis. And not only do you have to repeat it, but you must repeat it using a simple formula. So the formula in B23 is:</p>
+        <span class="informalequation block">
+					<span class="mathphrase">B23: =E18</span>
+				</span>
+        <p class="para editable block" id="frost-ch07_s02_s04_p07">Note how this cell must form the upper left corner of the data table. Now just fill in the row and column headings. We put various values for growth rate in the column headings and various values for price per unit in the row headings. Next highlight the whole table including the row and column headings and choose What If Analysis &gt; Data Table. The last step is to identify for Excel the first cells where growth rate and price per unit appear in the assumptions area. Then Excel will substitute the values from the row and column headings into the assumptions area, redo ALL the calculations in the spreadsheet and then capture the results in the data table—all behind the scenes!</p>
+        <p class="para editable block" id="frost-ch07_s02_s04_p08">Now it is your job to argue for the ones you think are most favorable and realistic.</p>
+        <div class="key_takeaways editable block" id="frost-ch07_s02_s04_n01">
+            <h3 class="title">Key Takeaways</h3>
+            <ul class="itemizedlist" id="frost-ch07_s02_s04_l01" mark="bullet">
+                <li>Well designed spreadsheets group input variables into an assumptions area. Ideally, the assumptions area is the only place that numbers are typed.</li>
+                <li>Formulas may be copied. However, cells that should not change in a formula should be named.</li>
+                <li>Many information systems projects fail. Your exposure can be analyzed in a sensitivity analysis using a data table.</li>
+            </ul>
+        </div>
+        <div class="exercises editable block" id="frost-ch07_s02_s04_n02">
+            <h3 class="title">Questions and Exercises</h3>
+            <ol class="orderedlist" id="frost-ch07_s02_s04_o01" numeration="arabic">
+                <li>Without using the built in data table function, how could you still construct a table that would perform a sensitivity analysis.</li>
+            </ol>
+        </div>
+        <div class="informalfigure large block">
+            <img src="section_11/99332451a7c162c55c70196273bf2ccf.png">
+            <p class="para">Make sure that the upper left corner of the data table is a simple formula that copies the value that you want to see varied in the data table.</p>
+        </div>
+        <div class="callout editable block" id="frost-ch07_s02_s04_n03">
+            <h3 class="title">Techniques</h3>
+            <p class="para" id="frost-ch07_s02_s04_p09">The following techniques, found in the PowerPoint section of the software reference, may be useful in completing the assignments for this chapter: <strong class="emphasis bold">Overview Map of Interface • Cell Name-Create • Cell Name-Delete • Format Number • Formula-Copy • Formula-Create • Formula Mode • Insert Column • Insert Row • Move Decimal Point • Sensitivity Analysis</strong></p>
+        </div>
+        <div class="exercises editable block" id="frost-ch07_s02_s04_n04">
+            <h3 class="title">L1 Assignment: Forecast Revenues/Expenses</h3>
+            <p class="para" id="frost-ch07_s02_s04_p10">Professionals are able to represent what they know intuitively in a properly formatted spreadsheet with an assumptions area.</p>
+            <p class="simpara">Setup</p>
+            <p class="para" id="frost-ch07_s02_s04_p11">Start Excel and properly title your spreadsheet.</p>
+            <p class="simpara">Content and Style</p>
+            <ul class="itemizedlist" id="frost-ch07_s02_l01" mark="bullet">
+                <li>Create an assumptions area containing all variables.</li>
+                <li>Name each number in the assumptions area.</li>
+                <li>Use those names in calculations in the spreadsheet below. Except for the Year column, EVERY number outside of the Assumptions area must be calculated with formulas.</li>
+                <li>Follow best practice design techniques in this chapter.</li>
+                <li>Only the first number in each column gets formatted as CURRENCY (Do not format as ACCOUNTING.) Update the format using the Number Formatting Technique. All other numbers greater than 1,000 should be in Comma style.</li>
+                <li>Include a copyright symbol with your name at the bottom.</li>
+                <li>The worksheet gridlines will not appear on the printout.</li>
+            </ul>
+            <p class="simpara">Deliverables</p>
+            <p class="para" id="frost-ch07_s02_s04_p12">Electronic submission: Submit the workbook electronically.</p>
+            <p class="para" id="frost-ch07_s02_s04_p13">Paper submission:</p>
+            <ul class="itemizedlist" id="frost-ch07_s02_l02" mark="bullet">
+                <li>Print out both the results and formulas. The formulas printout shows the formulas in each column. Reveal the formulas by typing CTRL+ ~ (press the CTRL and ~ keys at the same time). Adjust the column widths to closely crop the formulas by dragging the separator between each column in the gray header area.</li>
+                <li>Both printouts should use landscape orientation, which you will find under Page Layout &gt; Page Setup &gt; Orientation &gt; Landscape. Each printout should fit on one page. Choose Page Layout &gt; Scale to Fit &gt; Height: 1 page; Width: 1 page.</li>
+            </ul>
+            <div class="informalfigure large">
+                <img src="section_11/f6855bc9f64e963f36f905638180c6ce.png">
+                <p class="para">Please save the forecast revenues/costs spreadsheet; you will be updating it later.</p>
+            </div>
+        </div>
+        <div class="exercises editable block" id="frost-ch07_s02_s04_n05">
+            <h3 class="title">L2 Assignment: More Expenses &amp; Sensitivity Analysis</h3>
+            <p class="para" id="frost-ch07_s02_s04_p14">To make the problem more realistic, we bring in additional fixed costs. To help in decision making, we perform a sensitivity analysis.</p>
+            <p class="simpara">Setup</p>
+            <p class="para" id="frost-ch07_s02_s04_p15">Re-save your workbook file from the L1 under a new name and then modify it to look as below. This must be a new workbook—do not simply create a new sheet in the same workbook or some of your names will conflict and spoil the data table.</p>
+            <p class="simpara">Content and Style</p>
+            <ul class="itemizedlist" id="frost-ch07_s02_l03" mark="bullet">
+                <li>Incorporate new costs including Incorporation ($199), Apple Developer Cost ($99/year), Advertising ($2,400/yr.), Developer maintenance cost ($1,000/yr.). Create an assumptions area containing all variables.</li>
+                <li>Name each number in the assumptions area.</li>
+                <li>Use those names in calculations in the spreadsheet below. Except for the Year column, EVERY number outside of the assumptions area must be calculated with formulas.</li>
+                <li>Follow best practice design techniques in this chapter.</li>
+                <li>Only the first number in each column gets formatted as CURRENCY. (Do not format as ACCOUNTING.) Update the format using the Number Formatting Technique. All other numbers greater than 1,000 should be in Comma style.</li>
+                <li>Include a copyright symbol with your name at the bottom.</li>
+                <li>The worksheet gridlines will not appear on the printout.</li>
+                <li>Produce a sensitivity analysis table of total profit/(loss) as a function of growth rate and price per unit.</li>
+            </ul>
+            <p class="simpara">Deliverables</p>
+            <p class="para" id="frost-ch07_s02_s04_p16">Electronic submission: Submit the workbook electronically.</p>
+            <p class="para" id="frost-ch07_s02_s04_p17">Paper submission:</p>
+            <ul class="itemizedlist" id="frost-ch07_s02_l04" mark="bullet">
+                <li>Print out both the results and formulas. The formulas printout shows the formulas in each column. Reveal the formulas by typing CTRL+ ~. Adjust the column widths to closely crop the formulas by dragging the separator between each column in the gray header area.</li>
+                <li>Both printouts should use landscape orientation, which you will find under Page Layout &gt; Page Setup &gt; Orientation &gt; Landscape. Each printout should fit on one page. Choose Page Layout &gt; Scale to Fit &gt; Height: 1 page; Width: 1 page.</li>
+            </ul>
+            <div class="informalfigure large">
+                <img src="section_11/31357c287a1ce0a9384bd5c854e10b5a.png">
+                <p class="para">Add assumptions and columns as necessary to accommodate additional costs of maintenance, incorporation, and advertising.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  
+  <div id=navbar-bottom class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s11-01-development-options-and-costs.html"><img src="shared/images/batch-left.png"></a> <a href="s11-01-development-options-and-costs.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s12-01-calculate-the-terms-of-a-loan.html">Next Section</a> <a href="s12-01-calculate-the-terms-of-a-loan.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="shared/book.js"></script>
+  
+  
+</body>
+</html>

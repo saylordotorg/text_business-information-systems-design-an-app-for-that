@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="shared/bookhub.css" rel="stylesheet" type="text/css">
+  <title>Development Considerations</title>
+</head>
+<body>
+
+  
+  <div id=navbar-top class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s09-01-top-ten-guidelines-for-site-us.html"><img src="shared/images/batch-left.png"></a> <a href="s09-01-top-ten-guidelines-for-site-us.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s10-02-google-sites.html">Next Section</a> <a href="s10-02-google-sites.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  <div id="book-content">
+    <div class="section" id="frost-ch06_s01" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">6.1</span> Development Considerations</h2>
+    <div class="learning_objectives editable block" id="frost-ch06_s01_n01">
+        <h3 class="title">Learning Objectives</h3>
+        <ol class="orderedlist" id="frost-ch06_s01_o01" numeration="arabic">
+            <li>Determine when to build vs. buy a website solution</li>
+            <li>Compare and contrast the benefits of authoring in the cloud vs. on a workstation</li>
+            <li>Bring corporate standards into the decision making process when choosing development options</li>
+        </ol>
+    </div>
+    <div class="section" id="frost-ch06_s01_s01" version="5.0" lang="en">
+        <h2 class="title editable block">Introduction</h2>
+        <p class="para editable block" id="frost-ch06_s01_s01_p01">In this chapter you will create a website prototype to help market your iPhone application. Your prototype will become part of the Class App store. Other students will be able to review and purchase your app online. We are going to build a store together—so let’s get started!</p>
+        <p class="para editable block" id="frost-ch06_s01_s01_p02">Like the iTunes store, our class store will have separate pages describing each app offered for sale. Those pages will include screenshots of the apps—the same screenshots that you produced with MockApp. Each student developer will make his or her own page and then link that page to the store.</p>
+        <p class="para editable block" id="frost-ch06_s01_s01_p03">Once all the pages are linked we will have a shopping period during which we will “buy” each other’s apps. We will capture the sales data to see which apps are best selling and highest rated.</p>
+    </div>
+    <div class="section" id="frost-ch06_s01_s02" version="5.0" lang="en">
+        <h2 class="title editable block">Where Are We in the Life Cycle?</h2>
+        <p class="para editable block" id="frost-ch06_s01_s02_p01">Many information systems projects are conceived of in a life cycle that progresses in stages from analysis to implementation. The diagram below shows the stages that we touch in the current chapter:</p>
+        <div class="informalfigure large block">
+            <img src="section_10/793abc3668476fde040bfab580a84229.png">
+        </div>
+    </div>
+    <div class="section" id="frost-ch06_s01_s03" version="5.0" lang="en">
+        <h2 class="title editable block">Compatibility with Corporate Standards</h2>
+        <p class="para editable block" id="frost-ch06_s01_s03_p01">In the design chapter we talked about how important it is for us to standardize the look and feel for each page in our store so that it indeed looks like a store and not a loosely affiliated and somewhat bizarre collection of pages. However, it is also important that we standardize the development platform so that our store operates seamlessly.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p02">The corporate world tends to be conservative in choosing information systems solutions. In fact corporations usually like to standardize to preserve the brand image and to ensure reliability and ease of maintenance.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p03">Our classroom corporation is no different. Since we will be developing on online store together, it makes sense for us to agree on a common look and feel for each page in the site as well as a common platform for development. Our common platform is Google Sites and your professor may also require that you use a specific theme family on Google Sites to preserve a common look and feel.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p04">Corporations such as <a class="link" href="http://amazon.com">Amazon.com</a> have a clearly established corporate identity, which appears on every page. They use an orange and blue color scheme and consistently place navigation elements. Amazon uses a proprietary development tool since they are an industry leader.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p05">Why is standardization so important? Consider that if you create something wonderful in a cutting edge authoring tool and then leave, no one else will be able to update the site you created. More often than not this is exactly what happens when students create websites for small businesses. The business has no way to update and maintain the site in response to business needs. Concern about site maintenance is one of the reasons that businesses are hesitant to engage students to create their websites as a class project even for free.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p06">If given a choice between features and standardization, corporations will almost always choose standardization. We see this in other arenas as well such as office productivity tools. Corporations often mandate that everyone use the same word processor and even the same version! Students are often surprised when they arrive at the workplace to find that corporations live one or two versions behind on word processing software. Every upgrade represents potential costs in software, hardware, training, and lost productivity during training. Unless there is an overriding benefit to be realized, corporations will often choose to avoid the cost. In sum, corporations tend to be very conservative when it comes to software choice.</p>
+        <p class="para editable block" id="frost-ch06_s01_s03_p07">The corporate world is also happiest when there are clear market leaders to choose from. The last thing that a corporation needs is to invest in software from a company that later goes out of business.</p>
+    </div>
+    <div class="section" id="frost-ch06_s01_s04" version="5.0" lang="en">
+        <h2 class="title editable block">Build vs. Buy</h2>
+        <p class="para editable block" id="frost-ch06_s01_s04_p01">You might well ask why we are building a store rather than using off the shelf software that performs store management. The bottom line is that we want you to get under the hood to see how an information system functions—particularly how it interacts with a database.</p>
+        <p class="para editable block" id="frost-ch06_s01_s04_p02">Nonetheless, the first decision that a developer needs to make is whether to <span class="margin_term"><a class="glossterm">build or buy</a><span class="glossdef">The classic decision on whether to program or purchase an information systems solution. It is usually better to buy.</span></span> a solution for the business problem. To build means creating a customized solution; to buy means purchasing an off the shelf solution. The rule of thumb here is that if your business is similar in nature to thousands of other businesses, then you should buy a pre-built solution. There is no point in reinventing the wheel.</p>
+        <p class="para editable block" id="frost-ch06_s01_s04_p03">Off the shelf solutions tend to have a number of advantages. They anticipate functionality that your business requires and they are thoroughly tested. Most systems can be further customized to meet the needs of your business. From a support perspective, not only do you have customer service from the company that developed the solution, but you also have a user community that shares tips and tricks. Furthermore, as new versions are released you can improve the functionality and acquire bug fixes for your website with relatively little additional cost.</p>
+        <p class="para editable block" id="frost-ch06_s01_s04_p04">There are off the shelf solutions for almost any industry you can imagine—from doctor’s offices to construction companies. And the market is competitive, which helps drive down prices. Rather than hire a programmer, many businesses choose to adopt off the shelf solutions. Many of these off the shelf solutions live in the cloud so that the business does not even need to have a server in their office—only workstations to access the data in the cloud. For example <a class="link" href="http://www.curvedental.com">www.curvedental.com</a> is a cloud solution for a dental office.</p>
+        <p class="para editable block" id="frost-ch06_s01_s04_p05">The major disadvantage of off the shelf solutions is that they are limited in how far they may be customized.</p>
+        <p class="para editable block" id="frost-ch06_s01_s04_p06">If you do choose to build a customized solution from scratch, you still need to choose an authoring tool. Ideally, you want a tool that has some pre-built features that snap together much like Legos. We will employ a user friendly tool provided by Google called Google Sites.</p>
+    </div>
+    <div class="section" id="frost-ch06_s01_s05" version="5.0" lang="en">
+        <h2 class="title editable block">Design View vs. Code View</h2>
+        <p class="para editable block" id="frost-ch06_s01_s05_p01">Because this is an introductory course we want to avoid writing programming code. Fortunately Google Sites is sophisticated enough to allow us to avoid code view. However, we should understand the relationship between what we see on the screen—design view—and the underlying code.</p>
+        <p class="para editable block" id="frost-ch06_s01_s05_p02">Every webpage is constructed from HTML code. Professionals go to great lengths to refine that code for optimal look and performance. Most professional sites use a suite of products to prepare images for the site, to manage code on the site, to keep the pages organized, and to integrate with the backend database.</p>
+        <p class="para editable block" id="frost-ch06_s01_s05_p03">Adobe is probably the leading vendor of professional <span class="margin_term"><a class="glossterm">website authoring tools</a><span class="glossdef">Programs that greatly simplify the process of building a website. Google Sites is the authoring tool that we will use.</span></span>. Many custom built website solutions are authored at least in part with Adobe tools. The following page shows just a few of the many tools available from Adobe in their Creative Suite. The very fact that Adobe packages the tools in a suite is a hint at the complexity involved in creating a professional site.</p>
+        <p class="para editable block" id="frost-ch06_s01_s05_p04">Professional authoring tools typically have a <span class="margin_term"><a class="glossterm">design view</a><span class="glossdef">The what you see is what you get (WYSIWYG) view of website authoring. The design tool functions like a word processor.</span></span> and a <span class="margin_term"><a class="glossterm">code view</a><span class="glossdef">The HTML code that is built behind the design view. Most authoring tools provide a code view, though you rarely need to use it at our level. You may have seen some code view on YouTube when they show the code to embed a video in your webpage.</span></span> allowing the developer to switch back and forth between the two. The design view is much like working with PowerPoint. You drag text and graphics where they belong on the page. The code view allows the developer to edit HTML code for even more precise control or the look, feel, or operation of the site.</p>
+        <p class="para editable block" id="frost-ch06_s01_s05_p05">However, few beginners ever want to see website code nor pay for the sophisticated code editing features. Fortunately, they don’t have to. A number of website authoring tools have been developed over the years to automate the process of code generation and shield users from code view. One of them, Google Sites, is shown on the following page.</p>
+        <p class="para editable block" id="frost-ch06_s01_s05_p06">But what if you really need a piece of code to accomplish a specific task? Google Sites created an open platform so that developers can create and publish “gadgets,” which can be dropped into your website. Gadgets are like the prebuilt Lego assemblies mentioned earlier. They snap into an existing site. In fact gadgets are to Google Sites what apps are to the iPhone platform. In the same way that the Apple touts, “There’s an app for that,” for almost every iPhone need, just so Google might boast, “There’s a gadget for that,” for many website development needs. And like iPhone apps, some gadgets provide very sophisticated functionality.</p>
+        <div class="informalfigure large block">
+            <img src="section_10/2af5385c535163d07cdb705270eaab10.png">
+            <p class="para">Adobe Creative Suite (above) and Google Sites (below) are both website authoring tools. Creative Suite runs on high powered workstations and is used by professionals who need precise control over the look and feel of their site. Creative Suite is really a family of tools including Photoshop, Flash, and others than work well together. Google Sites is a rapid development solution that lives in the cloud. Control is more limited to template based solutions. Development time is much shorter with Google Sites than with Creative Suite. Adobe product screenshot reprinted with permission from Adobe Systems Incorporated.</p>
+        </div>
+    </div>
+    <div class="section" id="frost-ch06_s01_s06" version="5.0" lang="en">
+        <h2 class="title editable block">Client Side vs. Cloud Development</h2>
+        <p class="para editable block" id="frost-ch06_s01_s06_p01">Our authoring tool, Google Sites, lives in the cloud. Amateur sites and some small businesses tend to prefer cloud based tools for their low cost and ease of use.</p>
+        <div class="informalfigure large block">
+            <img src="section_10/b5f13d51312a6f31da0ad4acd09fdc2d.png">
+            <p class="para">Client side toolkits such as Adobe Creative Suite allow all development and testing to take place offline before uploading to the web server in the cloud. By contrast, cloud based tools such as Google Sites require the development to take place in the cloud. Cloud based tools tend to run a bit slower due to internet response times, but the results are instantly published.</p>
+        </div>
+        <p class="para editable block" id="frost-ch06_s01_s06_p02">The issue on <span class="margin_term"><a class="glossterm">client side</a><span class="glossdef">Running development software such as Dreamweaver on your workstation. The major advantage is that it runs very fast when running locally.</span></span> vs. <span class="margin_term"><a class="glossterm">cloud development</a><span class="glossdef">Accessing development software that lives in the cloud. The major advantage is that the development process tends to be greatly simplified.</span></span> is where the authoring software is located. Client side development takes place on a local computer. Only after the website is thoroughly tested is it uploaded to the cloud for hosting. Almost all professional systems are developed in this way.</p>
+        <p class="para editable block" id="frost-ch06_s01_s06_p03">There are numerous advantages to client side development, especially for large sites. The developer tends to have greater control over the look and feel of the website. The response time of the computer during development is very quick since there is no delay waiting for a cloud service to redraw the screen. Furthermore, the site is portable. The developer can choose to host it on any computer in the cloud.</p>
+        <p class="para editable block" id="frost-ch06_s01_s06_p04">Client side authoring tools range in price from free packages such as Pages, which is part of Apple’s operating system, to very expensive packages such as Adobe Creative Suite, which costs hundreds of dollars.</p>
+        <p class="para editable block" id="frost-ch06_s01_s06_p05">Cloud development tends to have a more template based look and feel. Google Sites is an example of a cloud development tool. The developer has less fine grained control over the look and feel of the website. However, with cloud development it is potentially easier to collaborate and integrate content.</p>
+        <p class="para editable block" id="frost-ch06_s01_s06_p06">Cloud development tools tend to be free or very low cost. The vendor of cloud development tools recovers their costs by running ads alongside, or even within, your site. In other words, you have no choice but to host your site with the cloud provider. As the page views or business features of the site begin to increase, the cloud provider will begin charging higher fees.</p>
+        <div class="key_takeaways editable block" id="frost-ch06_s01_s06_n01">
+            <h3 class="title">Key Takeaways</h3>
+            <ul class="itemizedlist" id="frost-ch06_s01_s06_l01" mark="bullet">
+                <li>It is usually best to buy rather than build an information system solution. And normally a cloud solution is preferred. Purchased cloud solutions tend to be more cost effective, better tested, and reliable.</li>
+                <li>Following corporate standards for software selection tends to lead to better integrated solutions.</li>
+                <li>A prototype is one step up from a mockup. It is a working version of the website though incomplete.</li>
+                <li>If you do decide to build then you will need an authoring tool to simplify the process of website construction. Authoring tools may live on your computer or you can use a cloud based authoring tool such as Google Sites.</li>
+            </ul>
+        </div>
+        <div class="exercises editable block" id="frost-ch06_s01_s06_n02">
+            <h3 class="title">Questions and Exercises</h3>
+            <ol class="orderedlist" id="frost-ch06_s01_s06_o01" numeration="arabic">
+                <li>As Internet speed and security increases would you expect to see more or fewer businesses turning to cloud solutions? Explain.</li>
+                <li>Is it better to outsource domestically or internationally? Explain the factors upon which your decision rests.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+  </div>
+  
+  <div id=navbar-bottom class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s09-01-top-ten-guidelines-for-site-us.html"><img src="shared/images/batch-left.png"></a> <a href="s09-01-top-ten-guidelines-for-site-us.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s10-02-google-sites.html">Next Section</a> <a href="s10-02-google-sites.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="shared/book.js"></script>
+  
+  
+</body>
+</html>
